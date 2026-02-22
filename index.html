@@ -1,0 +1,1048 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="src/styles/colors.css">
+    <link rel="stylesheet" href="src/styles/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header class="header-mobile">
+            <div class="burger-menu">
+                <span class="burger-menu__line burger-menu__line--up"></span>
+                <span class="burger-menu__line burger-menu__line--middle"></span>
+                <span class="burger-menu__line burger-menu__line--bottom"></span>
+            </div>
+            <a href="/" class="header__logo">
+                <img src="assets/logo.png" alt="" class="logo">
+            </a>
+            <div class="header-mobile__buttons">
+                <button class="header-mobile__buttons__search header-mobile__buttons__item">
+                    <img class="header-mobile__buttons__search-icon header-mobile__buttons__item-icon" src="/assets/search-mobile.png" alt="">
+                </button>
+                <button class="header-mobile__buttons__login header-mobile__buttons__item">
+                    <img class="header-mobile__buttons__login-icon header-mobile__buttons__item-icon" src="/assets/login.png" alt="">
+                </button>
+            </div>
+        </header>
+        <header class="header">
+            <a href="/" class="header__logo">
+                <img src="assets/logo.png" alt="" class="logo">
+            </a>
+            <div class="search">
+                <div class="search__inner">
+                    <input placeholder="Я хочу найти..." type="text" class="search__input">
+                    <button class="search__button">
+                        <img src="assets/search.png" alt="" class="search__button-icon">
+                    </button>
+                </div>
+            </div>
+            <button class="question">
+                <div class="question__inner">
+                    <img src="assets/question.png" alt="" class="question__icon">
+                    <span class="question__text">Задать вопрос</span>
+                </div>
+            </button>
+            <div class="phone">
+                <div class="phone__inner">
+                    <a class="phone__number" href="tel:+78003029270">8 800 302 92 70</a>
+                    <span class="phone__text">Бесплатный звонок юристу 24/7</span>
+                </div>
+            </div>
+        </header>
+        <nav class="nav">
+            <div class="nav__buttons">
+                <button class="nav__order-call nav__button">
+                    <img src="assets/phone.png" alt="" class="order-call__icon">
+                    <span class="order-call__text nav__button-text">Заказать звонок</span>
+                </button>
+                <a href="" class="nav__telegram nav__button">
+                    <img class="telegram__icon" src="assets/telegram.png" alt="">
+                    <span class="telegram__text nav__button-text">Telegram</span>
+                </a>
+            </div>
+            <ul class="nav__main">
+                <li class="nav__main-item">
+                    <a href="" class="nav__main-item__link">Отзывы</a>
+                </li>
+                <li class="nav__main-item">
+                    <a href="" class="nav__main-item__link">Вопросы</a>
+                </li>
+                <li class="nav__main-item">
+                    <a href="" class="nav__main-item__link">Наши юристы</a>
+                </li>
+                <li class="nav__main-item">
+                    <a href="" class="nav__main-item__link">Статьи</a>
+                </li>
+                <li class="nav__main-item">
+                    <a href="" class="nav__main-item__link">Контакты</a>
+                </li>
+            </ul>
+            <div class="nav__login">
+                <img class="login__icon" src="assets/login.png" alt="">
+                <a class="login__link" href="">Вход / Регистрация</a>
+            </div>
+        </nav>
+        <ul class="breadcrumbs">
+            <li class="breadcrumbs__item"><a href="/" class="breadcrumbs__item-link">Главная</a></li>
+            <span class="breadcrumbs__separator">/</span>
+            <li class="breadcrumbs__item"><a href="/" class="breadcrumbs__item-link">Горячая линия</a></li>
+        </ul>
+        <main class="main">
+            <div class="main__block">
+                <h1 class="main__title">Горячая линия по оказанию
+                    <br>
+                    юридической помощи онлайн
+                </h1>
+                <p class="main__description">
+                    Профессиональная помощь доступна круглосуточно – заявки обрабатываются в
+                    <br>
+                    любое время дня и ночи.
+                    Обращаясь к специалистам «100 Юристов», вы можете
+                    <br>
+                    рассчитывать на прозрачные, понятные условия
+                    сотрудничества
+                </p>
+                <div class="main__actions">
+                    <button class="main__actions-button">
+                        Задать вопрос юристу
+                    </button>
+                    <div class="main__actions-phone">
+                        <a href="tel:+78003029270" class="main__actions-phone__number">8 800 302-92-70</a>
+                        <span class="main__actions-phone__text">Бесплатный звонок юристу 24/7</span>
+                    </div>
+                </div>
+
+                <ul class="main__advantages">
+                    <li class="main__advantages-item">
+                        <img src="assets/adv1.png" alt="" class="main__advantages-item__image">
+                        <span class="main__advantages-item__text">Круглосуточно</span>
+                    </li>
+                    <li class="main__advantages-item">
+                        <img src="assets/adv2.png" alt="" class="main__advantages-item__image">
+                        <span class="main__advantages-item__text">Бесплатно</span>
+                    </li>
+                    <li class="main__advantages-item">
+                        <img src="assets/adv3.png" alt="" class="main__advantages-item__image">
+                        <span class="main__advantages-item__text">Конфиденциально</span>
+                    </li>
+                    <li class="main__advantages-item">
+                        <img src="assets/adv4.png" alt="" class="main__advantages-item__image">
+                        <span class="main__advantages-item__text">Быстро</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="main__image-wrapper">
+                <img src="assets/main__image.png" alt="" class="main__image">
+            </div>
+        </main>
+
+        <section class="legal-help">
+            <h2 class="legal-help__title">Юридическая помощь</h2>
+            <p class="legal-help__description section-description">
+                <span>
+                    Срочно понадобились услуги профессионального юриста или адвоката? Решение есть! Наша горячая
+                    юридическая линия – возможность оперативно, абсолютно бесплатно получить ответ на любой вопрос.
+                    Теперь не нужно записываться на офлайн-прием и тратить время на поездку и очереди перед
+                    кабинетом.
+                </span>
+                <span>
+                    Профессиональная помощь доступна круглосуточно – заявки обрабатываются в любое время дня и ночи.
+                    Обращаясь к специалистам «100 Юристов», вы можете рассчитывать на прозрачные, понятные условия
+                    сотрудничества.
+                </span>
+            </p>
+        </section>
+        <section class="tutorial">
+            <h2 class="tutorial__title">
+                Как получить бесплатную юридическую консультацию?
+            </h2>
+            <p class="tutorial__description section-description">
+                Задайте вопрос юристу бесплатно круглосуточно и без регистрации
+            </p>
+            <ul class="tutorial__variants">
+                <li class="tutorial__variants__item">
+                    <div class="tutorial__variants__item-group">
+                        <img src="assets/tutorial-phone.png" alt="" class="tutorial__variants__item-icon">
+                        <span class="tutorial__variants__item-text">По телефону горячей линии</span>
+                        <a href="tel:+78003029270" class="tutorial__variants__item-phone">8 800 302-92-70</a>
+                    </div>
+                    <button class="tutorial__variants__item-action">Заказать звонок</button>
+                </li>
+                <li class="tutorial__variants__item">
+                    <div class="tutorial__variants__item-group">
+
+                        <img src="assets/tutorial-reply.png" alt="" class="tutorial__variants__item-icon">
+                        <span class="tutorial__variants__item-text">
+                            Задать свой вопрос на сайте
+                            <br>
+                            и получить ответ онлайн
+                        </span>
+                    </div>
+                    <button class="tutorial__variants__item-action">Задать вопрос</button>
+                </li>
+                <li class="tutorial__variants__item">
+                    <div class="tutorial__variants__item-group">
+
+                        <img src="assets/tutorial-feedback.png" alt="" class="tutorial__variants__item-icon">
+                        <span class="tutorial__variants__item-text">
+                            Отправить запрос на
+                            <br>
+                            обратный звонок юриста
+                        </span>
+                    </div>
+                    <button class="tutorial__variants__item-action">Отправить запрос</button>
+                </li>
+                <li class="tutorial__variants__item">
+                    <div class="tutorial__variants__item-group">
+
+                        <img src="assets/tutorial-meet.png" alt="" class="tutorial__variants__item-icon">
+                        <span class="tutorial__variants__item-text">
+                            Записаться на очную
+                            <br>
+                            консультацию в офис</span>
+                    </div>
+                    <button class="tutorial__variants__item-action">Записаться</button>
+                </li>
+            </ul>
+        </section>
+        <section class="call">
+            <img src="assets/circle.png" alt="" class="call__circle">
+            <img src="assets/call-woman.png" alt="" class="call__woman">
+            <div class="call__inner">
+                <div class="call__action">
+                    <div class="call__action-text">Звоните, мы работаем 24/7</div>
+                    <a href="tel:+78003029270" class="call__action-number">8 800 302-92-70</a>
+                </div>
+                <div class="call__jurists">
+                    <span class="call__jurists-text">
+                        64 юриста сейчас онлайн
+                    </span>
+                    <ul class="call__jurists-list">
+                        <li class="call__jurists-list__item">
+                            <img src="assets/j1.png" alt="" class="call__jurists-list__item-image">
+                        </li>
+                        <li class="call__jurists-list__item">
+                            <img src="assets/j2.png" alt="" class="call__jurists-list__item-image">
+                        </li>
+                        <li class="call__jurists-list__item">
+                            <img src="assets/j3.png" alt="" class="call__jurists-list__item-image">
+                        </li>
+                        <li class="call__jurists-list__item">
+                            <img src="assets/j4.png" alt="" class="call__jurists-list__item-image">
+                        </li>
+                        <li class="call__jurists-list__item">
+                            <img src="assets/j5.png" alt="" class="call__jurists-list__item-image">
+                        </li>
+                        <li class="call__jurists-list__item">
+                            <img src="assets/j6.png" alt="" class="call__jurists-list__item-image">
+                        </li>
+                        <li class="call__jurists-list__item call__jurists-list__more">
+                            <span>+59</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="variants">
+            <h2 class="variants__title">
+                Как мы сможем помочь вам?
+            </h2>
+            <ul class="variants__list">
+                <li class="variants__list__item">
+                    <img src="assets/v1.png" alt="" class="variants__list__item-image">
+                    <p class="variants__list__item-text">
+                        Провести бесплатную консультацию на личном приёме у нас в офисе, по телефону горячей линии
+                        <a href="tel:+78003029270">8 800 302-92-70</a>, в онлайн чате или по WhatsApp и Telegram
+                    </p>
+                </li>
+                <li class="variants__list__item">
+                    <img src="assets/v2.png" alt="" class="variants__list__item-image">
+                    <p class="variants__list__item-text">
+                        В ходе консультации будет проанализирована ваша ситуация с точки зрения законодательства
+                        Российской Федерации с последними изменениями на сегодняшний день
+                    </p>
+                </li>
+                <li class="variants__list__item">
+                    <img src="assets/v3.png" alt="" class="variants__list__item-image">
+                    <p class="variants__list__item-text">
+                        После чего наш специалист сможет определить все возможные пути решения вашей ситуации
+                        выявить все возможные подводные камни и подскажет как их избежать.
+                    </p>
+                </li>
+                <li class="variants__list__item">
+                    <img src="assets/v4.png" alt="" class="variants__list__item-image">
+                    <p class="variants__list__item-text">
+                        Как показывает практика данной консультации бывает достаточно для решения вашего вопроса.
+                        Если нет, то вы всегда сможете воспользоваться нашими услугами на выгодных условиях.
+                    </p>
+                </li>
+            </ul>
+        </section>
+        <section class="about">
+            <div class="about__main">
+                <h2 class="about__title">
+                    Почему стоит выбрать нас?
+                </h2>
+                <p class="about__description section-description">
+                    Срочно понадобились услуги профессионального юриста или адвоката? Решение есть! Наша горячая
+                    юридическая линия – возможность оперативно, абсолютно бесплатно получить ответ на любой вопрос
+                </p>
+                <ul class="about__advantages">
+                    <li class="about__advantages__item">
+                        <div class="about__advantages__item-number">100 тыс</div>
+                        <span class="about__advantages__item-text">Успешных дел</span>
+                    </li>
+                    <li class="about__advantages__item">
+                        <div class="about__advantages__item-number">10 лет</div>
+                        <span class="about__advantages__item-text">Успешной работы</span>
+                    </li>
+                    <li class="about__advantages__item">
+                        <div class="about__advantages__item-number">100</div>
+                        <span class="about__advantages__item-text">Юристов онлайн</span>
+                    </li>
+                </ul>
+            </div>
+            <img src="assets/about.png" class="about__img" alt="">
+        </section>
+        <section class="order-call">
+            <div class="order-call__phone">
+                <span class="order-call__phone-text">Телефон горячей линии</span>
+                <a href="tel:+78003029270" class="order-call__phone-number">8 800 302-92-70</a>
+            </div>
+            <form action="" class="order-call__form section__form">
+                <div class="order-call__form__title">Заказать обратный звонок</div>
+                <div class="order-call__form__main">
+                    <div class="input-wrapper">
+                        <label for="phone" class="input-wrapper__label">Номер телефона</label>
+                        <input type="tel" id="phone" class="input-wrapper__input">
+                    </div>
+                    <button class="input-wrapper__button">Заказать звонок</button>
+                </div>
+                <span class="order-call__form__text">
+                    Отправляя вопрос, вы соглашаетесь с условиями <a href="/"
+                        class="order-call__form__text-agreement">Пользовательского соглашения</a>
+                </span>
+            </form>
+        </section>
+        <section class="specialties">
+            <h2 class="specialties__title">Специальности наших юристов</h2>
+            <ul class="specialties__list">
+                <li class="specialties__list__item">
+                    <div class="specialties__list__item-title">
+                        <img src="assets/spec1.png" alt="" class="specialties__list__item-title__icon">
+                        <span class="specialties__list__item-title__text">По семейным делам</span>
+                    </div>
+                    <p class="specialties__list__item-description">
+                        Юрист помогает в решении жилищных, образовательных, имущественных, страховых, земельных и
+                        иных споров и вопросов по данному направлению. В зависимости от ситуации возможно применение
+                        досудебного и судебного урегулирования. Более подробную информацию получите в процессе
+                        юридической консультации
+                    </p>
+                </li>
+                <li class="specialties__list__item">
+                    <div class="specialties__list__item-title">
+                        <img src="assets/spec2.png" alt="" class="specialties__list__item-title__icon">
+                        <span class="specialties__list__item-title__text">По вопросам ЖКХ</span>
+                    </div>
+                    <p class="specialties__list__item-description">
+                        С каждым годом у граждан России возникает все больше вопросов к структурам
+                        жилищно-коммунального хозяйства. Некоторых интересует, почему они должны каждый месяц
+                        платить за лифт, проживая при этом на первом этаже. А кого-то возмущает, что коммунальщики
+                        вычитывают из заработной платы людей долги по услугам. Вопросов много. И все они нуждаются в
+                        грамотной правовой оценке. Бесплатная помощь наших юристов – лучший выход из ситуации.
+                        Специалисты мгновенно оценят ситуацию, разъяснят непонятные моменты, подскажут, как
+                        правильно оформить претензию/иск и куда ее направить
+                    </p>
+                </li>
+                <li class="specialties__list__item">
+                    <div class="specialties__list__item-title">
+                        <img src="assets/spec3.png" alt="" class="specialties__list__item-title__icon">
+                        <span class="specialties__list__item-title__text">По жилищному праву</span>
+                    </div>
+                    <p class="specialties__list__item-description">
+                        Квартирный вопрос из года в год остается камнем преткновения для многих граждан. Люди чуть
+                        ли не на смерть бьются за каждый причитающийся им квадратный метр. И эта борьба нередко
+                        сопровождается серьезными тратами как в виде финансов, так и нервов. Чтобы максимально
+                        защитить себя, оградить от возможных неприятных «сюрпризов» и сэкономить ресурсы,
+                        воспользуйтесь бесплатной юридической помощью. Специалисты подскажут, на что обратить
+                        внимание при покупке недвижимости, как получить разрешение на установку систем
+                        видеонаблюдения, как грамотно подойти к сделке купли-продажи и т.д.
+                    </p>
+                </li>
+                <li class="specialties__list__item">
+                    <div class="specialties__list__item-title">
+                        <img src="assets/spec4.png" alt="" class="specialties__list__item-title__icon">
+                        <span class="specialties__list__item-title__text">По кредитам</span>
+                    </div>
+                    <p class="specialties__list__item-description">
+                        Данное направление актуально не только для отдельных граждан, но и предпринимателей, крупных
+                        предприятий. Во время бесплатной консультации наши сотрудники подскажут, как правильно вести
+                        переговоры с кредиторами, как обезопасить имущество от возможного ареста. А также ответят на
+                        многие другие вопросы, связанные с кредитованием.
+                    </p>
+                </li>
+                <li class="specialties__list__item">
+                    <div class="specialties__list__item-title">
+                        <img src="assets/spec5.png" alt="" class="specialties__list__item-title__icon">
+                        <span class="specialties__list__item-title__text">По земельным делам</span>
+                    </div>
+                    <p class="specialties__list__item-description">
+                        На сегодняшний день земля – ценный актив, использовать который можно по-разному. Например,
+                        на ней можно добывать полезные ископаемые (при наличии таковых в недрах), производить
+                        высадку культурных растений, сдавать в аренду и т.д. В процессе эксплуатации земельных
+                        участков возникают разнообразные ситуации, большинство которых невозможно разрешить без
+                        грамотной юридической консультации. Получить ее можно круглосуточно и бесплатно через наш
+                        сервис.
+                    </p>
+                </li>
+                <li class="specialties__list__item">
+                    <div class="specialties__list__item-title">
+                        <img src="assets/spec6.png" alt="" class="specialties__list__item-title__icon">
+                        <span class="specialties__list__item-title__text">По трудовым вопросам</span>
+                    </div>
+                    <p class="specialties__list__item-description">
+                        Права трудящихся, несмотря на наличие соответствующего кодекса, постоянно нарушаются. Многие
+                        сотрудники сталкиваются с незаконными увольнениями, беспричинно лишаются оплаты отпускных,
+                        несут чрезмерную материальную ответственность и пр. Возможны и обратные ситуации, когда сами
+                        предприятия страдают от произвола персонала. Своевременное привлечение к возникшей проблеме
+                        адвоката позволяет с минимальными потерями урегулировать конфликт. Если вы столкнулись с
+                        подобной ситуацией, воспользуйтесь бесплатной юридической консультацией по телефону от «100
+                        Юристов»
+                    </p>
+                </li>
+                <li class="specialties__list__item">
+                    <div class="specialties__list__item-title">
+                        <img src="assets/spec7.png" alt="" class="specialties__list__item-title__icon">
+                        <span class="specialties__list__item-title__text">По приставам</span>
+                    </div>
+                    <p class="specialties__list__item-description">
+                        Визит пристава – это практически всегда негативные эмоции. Особенно неприятно общение, если
+                        человек не знает, как правильно себя вести с сотрудниками службы. В этом случае без
+                        консультации не обойтись. Специалисты во время бесплатного звонка раскрывают нюансы
+                        взаимодействия пристава с должником. Например, юристы расскажут, что сотрудники имеют права
+                        беспокоить человека с 6 утра до 10 вечера и т.д.
+                    </p>
+                </li>
+                <li class="specialties__list__item">
+                    <div class="specialties__list__item-title">
+                        <img src="assets/spec8.png" alt="" class="specialties__list__item-title__icon">
+                        <span class="specialties__list__item-title__text">По гражданским делам</span>
+                    </div>
+                    <p class="specialties__list__item-description">
+                        Юрист помогает в решении жилищных, образовательных, имущественных, страховых, земельных и
+                        иных споров и вопросов по данному направлению. В зависимости от ситуации возможно применение
+                        досудебного и судебного урегулирования. Более подробную информацию получите в процессе
+                        юридической консультации
+                    </p>
+                </li>
+            </ul>
+        </section>
+        <section class="send-question">
+            <h2 class="send-question__title">
+                Задайте вопрос
+                <br>
+                юристу бесплатно
+            </h2>
+            <form action="" class="order-call__form section__form">
+                <div class="order-call__form__main">
+                    <div class="input-wrapper">
+                        <label for="phone" class="input-wrapper__label">Номер телефона</label>
+                        <input type="tel" placeholder="+7-999-999-9999" pattern="\+\d-\d{3}-\d{3}-\d{4}" id="phone"
+                            class="input-wrapper__input">
+                    </div>
+                    <button class="input-wrapper__button">Заказать звонок</button>
+                </div>
+                <span class="order-call__form__text">
+                    Отправляя вопрос, вы соглашаетесь с условиями
+                    <br>
+                    <a href="/" class="order-call__form__text-agreement">Пользовательского соглашения</a>
+                </span>
+            </form>
+            <img src="assets/send-q.png" alt="" class="send-question__image">
+        </section>
+        <section class="seo">
+            <h2 class="seo__title">Блок для текста SEO</h2>
+            <p class="seo__description">
+                <span>
+                    Срочно понадобились услуги профессионального юриста или адвоката? Решение есть! Наша горячая
+                    юридическая линия – возможность оперативно, абсолютно бесплатно получить ответ на любой вопрос.
+                    Теперь не нужно записываться на офлайн-прием и тратить время на поездку и очереди перед
+                    кабинетом.
+                </span>
+                <span>
+                    Профессиональная помощь доступна круглосуточно – заявки обрабатываются в любое время дня и
+                    ночи.
+                    Обращаясь к специалистам «100 Юристов», вы можете рассчитывать на прозрачные, понятные условия
+                    сотрудничества.
+                </span>
+                <span>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod in eos quis eveniet odit!
+                    Repellendus beatae sint nihil? Sapiente consequatur explicabo beatae! Minus ipsam corporis animi
+                    omnis officiis tempora autem.
+                </span>
+            </p>
+            <button class="seo__more">
+                Показать весь текст
+            </button>
+        </section>
+        <section class="reviews">
+            <button class="slider-left slider-button disable">
+                <img src="assets/slider-l.png" alt="">
+            </button>
+            <button class="slider-right slider-button">
+                <img src="assets/slider-r.png" alt="">
+            </button>
+            <h2 class="reviews__title">
+                Отзывы наших клиентов
+            </h2>
+            <div class="reviews__wrap">
+                <ul class="reviews__list">
+                    <li class="reviews__list__item">
+                        <div class="reviews__list__item-header">
+                            <div class="reviews__list__item-title">
+                                <div class="reviews__list__item-info">
+                                    <img class="reviews__list__item-usericon" src="assets/user.png"></img>
+                                    <div class="reviews__list__item-group">
+                                        <span class="reviews__list-item-username">Вадим</span>
+                                        <span class="reviews__list-item-date">02 июля 2023</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="reviews__list__item-content">
+                                Хочу поблагодарить Веру Владимировну за оказанную мне помощь, объяснила что да как,
+                                на
+                                душе стало намного легче
+                            </p>
+                        </div>
+                        <div class="reviews__list__item-question">
+                            <span class="reviews__list__item-question-label">Вопрос:</span>
+                            <a href="" class="reviews__list__item-question-main">Заберут ли меня в случае общей
+                                мобилизации
+                                на войну если я</a>
+
+                        </div>
+                    </li>
+                    <li class="reviews__list__item">
+                        <div class="reviews__list__item-header">
+                            <div class="reviews__list__item-title">
+                                <div class="reviews__list__item-info">
+                                    <img class="reviews__list__item-usericon" src="assets/user.png"></img>
+                                    <div class="reviews__list__item-group">
+                                        <span class="reviews__list-item-username">Вадим</span>
+                                        <span class="reviews__list-item-date">02 июля 2023</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="reviews__list__item-content">
+                                Хочу поблагодарить Веру Владимировну за оказанную мне помощь, объяснила что да как,
+                                на
+                                душе стало намного легче
+                            </p>
+                        </div>
+                        <div class="reviews__list__item-question">
+                            <span class="reviews__list__item-question-label">Вопрос:</span>
+                            <a href="" class="reviews__list__item-question-main">Заберут ли меня в случае общей
+                                мобилизации
+                                на войну если я</a>
+
+                        </div>
+                    </li>
+                    <li class="reviews__list__item">
+                        <div class="reviews__list__item-header">
+                            <div class="reviews__list__item-title">
+                                <div class="reviews__list__item-info">
+                                    <img class="reviews__list__item-usericon" src="assets/user.png"></img>
+                                    <div class="reviews__list__item-group">
+                                        <span class="reviews__list-item-username">Вадим</span>
+                                        <span class="reviews__list-item-date">02 июля 2023</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="reviews__list__item-content">
+                                Хочу поблагодарить Веру Владимировну за оказанную мне помощь, объяснила что да как,
+                                на
+                                душе стало намного легче
+                            </p>
+                        </div>
+                        <div class="reviews__list__item-question">
+                            <span class="reviews__list__item-question-label">Вопрос:</span>
+                            <a href="" class="reviews__list__item-question-main">Заберут ли меня в случае общей
+                                мобилизации
+                                на войну если я</a>
+
+                        </div>
+                    </li>
+                    <li class="reviews__list__item">
+                        <div class="reviews__list__item-header">
+                            <div class="reviews__list__item-title">
+                                <div class="reviews__list__item-info">
+                                    <img class="reviews__list__item-usericon" src="assets/user.png"></img>
+                                    <div class="reviews__list__item-group">
+                                        <span class="reviews__list-item-username">Вадим</span>
+                                        <span class="reviews__list-item-date">02 июля 2023</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="reviews__list__item-content">
+                                Хочу поблагодарить Веру Владимировну за оказанную мне помощь, объяснила что да как,
+                                на
+                                душе стало намного легче
+                            </p>
+                        </div>
+                        <div class="reviews__list__item-question">
+                            <span class="reviews__list__item-question-label">Вопрос:</span>
+                            <a href="" class="reviews__list__item-question-main">Заберут ли меня в случае общей
+                                мобилизации
+                                на войну если я</a>
+
+                        </div>
+                    </li>
+                    <li class="reviews__list__item">
+                        <div class="reviews__list__item-header">
+                            <div class="reviews__list__item-title">
+                                <div class="reviews__list__item-info">
+                                    <img class="reviews__list__item-usericon" src="assets/user.png"></img>
+                                    <div class="reviews__list__item-group">
+                                        <span class="reviews__list-item-username">Вадим</span>
+                                        <span class="reviews__list-item-date">02 июля 2023</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="reviews__list__item-content">
+                                Хочу поблагодарить Веру Владимировну за оказанную мне помощь, объяснила что да как,
+                                на
+                                душе стало намного легче
+                            </p>
+                        </div>
+                        <div class="reviews__list__item-question">
+                            <span class="reviews__list__item-question-label">Вопрос:</span>
+                            <a href="" class="reviews__list__item-question-main">Заберут ли меня в случае общей
+                                мобилизации
+                                на войну если я</a>
+
+                        </div>
+                    </li>
+                    <li class="reviews__list__item">
+                        <div class="reviews__list__item-header">
+                            <div class="reviews__list__item-title">
+                                <div class="reviews__list__item-info">
+                                    <img class="reviews__list__item-usericon" src="assets/user.png"></img>
+                                    <div class="reviews__list__item-group">
+                                        <span class="reviews__list-item-username">Вадим</span>
+                                        <span class="reviews__list-item-date">02 июля 2023</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="reviews__list__item-content">
+                                Хочу поблагодарить Веру Владимировну за оказанную мне помощь, объяснила что да как,
+                                на
+                                душе стало намного легче
+                            </p>
+                        </div>
+                        <div class="reviews__list__item-question">
+                            <span class="reviews__list__item-question-label">Вопрос:</span>
+                            <a href="" class="reviews__list__item-question-main">Заберут ли меня в случае общей
+                                мобилизации
+                                на войну если я</a>
+
+                        </div>
+                    </li>
+                    <li class="reviews__list__item">
+                        <div class="reviews__list__item-header">
+                            <div class="reviews__list__item-title">
+                                <div class="reviews__list__item-info">
+                                    <img class="reviews__list__item-usericon" src="assets/user.png"></img>
+                                    <div class="reviews__list__item-group">
+                                        <span class="reviews__list-item-username">Вадим</span>
+                                        <span class="reviews__list-item-date">02 июля 2023</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="reviews__list__item-content">
+                                Хочу поблагодарить Веру Владимировну за оказанную мне помощь, объяснила что да как,
+                                на
+                                душе стало намного легче
+                            </p>
+                        </div>
+                        <div class="reviews__list__item-question">
+                            <span class="reviews__list__item-question-label">Вопрос:</span>
+                            <a href="" class="reviews__list__item-question-main">Заберут ли меня в случае общей
+                                мобилизации
+                                на войну если я</a>
+
+                        </div>
+                    </li>
+                    <li class="reviews__list__item">
+                        <div class="reviews__list__item-header">
+                            <div class="reviews__list__item-title">
+                                <div class="reviews__list__item-info">
+                                    <img class="reviews__list__item-usericon" src="assets/user.png"></img>
+                                    <div class="reviews__list__item-group">
+                                        <span class="reviews__list-item-username">Вадим</span>
+                                        <span class="reviews__list-item-date">02 июля 2023</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="reviews__list__item-content">
+                                Хочу поблагодарить Веру Владимировну за оказанную мне помощь, объяснила что да как,
+                                на
+                                душе стало намного легче
+                            </p>
+                        </div>
+                        <div class="reviews__list__item-question">
+                            <span class="reviews__list__item-question-label">Вопрос:</span>
+                            <a href="" class="reviews__list__item-question-main">Заберут ли меня в случае общей
+                                мобилизации
+                                на войну если я</a>
+
+                        </div>
+                    </li>
+                    <li class="reviews__list__item">
+                        <div class="reviews__list__item-header">
+                            <div class="reviews__list__item-title">
+                                <div class="reviews__list__item-info">
+                                    <img class="reviews__list__item-usericon" src="assets/user.png"></img>
+                                    <div class="reviews__list__item-group">
+                                        <span class="reviews__list-item-username">Вадим</span>
+                                        <span class="reviews__list-item-date">02 июля 2023</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="reviews__list__item-content">
+                                ПОСЛЕДНИЙХочу поблагодарить Веру Владимировну за оказанную мне помощь, объяснила что
+                                да как,
+                                на
+                                душе стало намного легче
+                            </p>
+                        </div>
+                        <div class="reviews__list__item-question">
+                            <span class="reviews__list__item-question-label">Вопрос:</span>
+                            <a href="" class="reviews__list__item-question-main">Заберут ли меня в случае общей
+                                мобилизации
+                                на войну если я</a>
+
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="jurists">
+            <h2 class="jurists__title">Юристы портала</h2>
+            <div class="jurists__main">
+                <div class="jurists__main-group jurists__main-content">
+                    <ul class="jurists__list">
+                        <li class="jurists__list__item">
+                            <a href="" class="jurists__list__item-link">
+                                <img src="assets/jurist.png" alt="" class="jurists__list__item-image">
+                                <div class="jurists__list__item-info">
+                                    <div class="jurists__list__item-title">
+                                        <span class="jurists__list__item-name">Гурьянова Вера Владимировна</span>
+                                        <span class="jurists__list__item-desc">Юрист, Самара</span>
+                                    </div>
+                                    <span class="jurists__list__item-more">
+                                        693 консультации
+                                    </span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="jurists__list__item">
+                            <a href="" class="jurists__list__item-link">
+                                <img src="assets/jurist.png" alt="" class="jurists__list__item-image">
+                                <div class="jurists__list__item-info">
+                                    <div class="jurists__list__item-title">
+                                        <span class="jurists__list__item-name">Гурьянова Вера Владимировна</span>
+                                        <span class="jurists__list__item-desc">Юрист, Самара</span>
+                                    </div>
+                                    <span class="jurists__list__item-more">
+                                        693 консультации
+                                    </span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="jurists__list__item">
+                            <a href="" class="jurists__list__item-link">
+                                <img src="assets/jurist.png" alt="" class="jurists__list__item-image">
+                                <div class="jurists__list__item-info">
+                                    <div class="jurists__list__item-title">
+                                        <span class="jurists__list__item-name">Гурьянова Вера Владимировна</span>
+                                        <span class="jurists__list__item-desc">Юрист, Самара</span>
+                                    </div>
+                                    <span class="jurists__list__item-more">
+                                        693 консультации
+                                    </span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="jurists__list__item">
+                            <a href="" class="jurists__list__item-link">
+                                <img src="assets/jurist.png" alt="" class="jurists__list__item-image">
+                                <div class="jurists__list__item-info">
+                                    <div class="jurists__list__item-title">
+                                        <span class="jurists__list__item-name">Гурьянова Вера Владимировна</span>
+                                        <span class="jurists__list__item-desc">Юрист, Самара</span>
+                                    </div>
+                                    <span class="jurists__list__item-more">
+                                        693 консультации
+                                    </span>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                    <a href="/" class="jurists__link">Все наши юристы</a>
+                </div>
+                <div class="jurists__main-group jurists__main-form">
+                    <div class="jurists__request">
+                        <span class="jurists__request__title">Задать вопрос юристу</span>
+                        <span class="jurists__request__description">Напишите нам вопрос и мы обязательно вам
+                            ответим</span>
+                        <form action="" class="jurists__request__form">
+                            <textarea id="order-request" type="text" class="jurists__requst__form-main"
+                                placeholder="Опишите вашу проблему..."></textarea>
+                            <div class="form-row">
+                                <div class="input-wrapper">
+                                    <label for="order-phone" class="input-wrapper__label">Номер телефона</label>
+                                    <input type="tel" id="order-phone" class="input-wrapper__input">
+                                </div>
+                                <div class="input-wrapper">
+                                    <label for="order-name" class="input-wrapper__label">Ваше имя</label>
+                                    <input type="text" id="order-name" class="input-wrapper__input">
+                                </div>
+                                <button class="input-wrapper__button">Отправить</button>
+                            </div>
+                            <p class="form-subtext">
+                                Отправляя запрос, вы соглашаетесь с условиями
+                                <a class="form-link">Пользовательского соглашения</a>
+                            </p>
+                            <div class="form-row form-info">
+                                <div class="form-info__item">
+                                    <span class="form-info__item-main">48 юристов</span>
+                                    <span class="form-info__item-sub">сейчас онлайн</span>
+                                </div>
+                                <div class="form-info__item">
+                                    <span class="form-info__item-main">10 минут</span>
+                                    <span class="form-info__item-sub">средняя скорость ответа</span>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer class="guide">
+            <h2 class="guide__title">Темы справочных материалов</h2>
+            <ul class="guide__list">
+                <li class="guide__list-item guide__section">
+                    <p class="guide__section-title">А</p>
+                    <ul class="guide__section-list">
+                        <li class="guide__section-list__item">
+                            <a href="" class="guide__section-list__item-link">Автокредит</a>
+                        </li>
+                        <li class="guide__section-list__item">
+                            <a href="" class="guide__section-list__item-link">Авторское право</a>
+                        </li>
+                        <li class="guide__section-list__item">
+                            <a href="" class="guide__section-list__item-link">Автоюрист</a>
+                        </li>
+                        <li class="guide__section-list__item">
+                            <a href="" class="guide__section-list__item-link">Административное право</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="guide__list-item guide__section">
+                    <p class="guide__section-title">Б</p>
+                    <ul class="guide__section-list">
+                        <li class="guide__section-list__item">
+                            <a href="" class="guide__section-list__item-link">Банкротство</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="guide__list-item guide__section">
+                    <p class="guide__section-title">В</p>
+                    <ul class="guide__section-list">
+                        <li class="guide__section-list__item">
+                            <a href="" class="guide__section-list__item-link">Военное право</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="guide__list-item guide__section">
+                    <p class="guide__section-title">Г</p>
+                    <ul class="guide__section-list">
+                        <li class="guide__section-list__item">
+                            <a href="" class="guide__section-list__item-link">Гражданское право</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="guide__list-item guide__section">
+                    <p class="guide__section-title">Г</p>
+                    <ul class="guide__section-list">
+                        <li class="guide__section-list__item">
+                            <a href="" class="guide__section-list__item-link">Гражданское право</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="guide__list-item guide__section">
+                    <p class="guide__section-title">Ж</p>
+                    <ul class="guide__section-list">
+                        <li class="guide__section-list__item">
+                            <a href="" class="guide__section-list__item-link">Жилищное право</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="guide__list-item guide__section">
+                    <p class="guide__section-title">З</p>
+                    <ul class="guide__section-list">
+                        <li class="guide__section-list__item">
+                            <a href="" class="guide__section-list__item-link">Земельное право</a>
+                        </li>
+                        <li class="guide__section-list__item">
+                            <a href="" class="guide__section-list__item-link">Защита прав потребителей</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="guide__list-item guide__section">
+                    <p class="guide__section-title">И</p>
+                    <ul class="guide__section-list">
+                        <li class="guide__section-list__item">
+                            <a href="" class="guide__section-list__item-link">Ипотека</a>
+                        </li>
+                        <li class="guide__section-list__item">
+                            <a href="" class="guide__section-list__item-link">Исполнительное право</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="guide__list-item guide__section">
+                    <p class="guide__section-title">К</p>
+                    <ul class="guide__section-list">
+                        <li class="guide__section-list__item">
+                            <a href="" class="guide__section-list__item-link">Корпоративное право</a>
+                        </li>
+                        <li class="guide__section-list__item">
+                            <a href="" class="guide__section-list__item-link">Кредиты</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="guide__list-item guide__section">
+                    <p class="guide__section-title">М</p>
+                    <ul class="guide__section-list">
+                        <li class="guide__section-list__item">
+                            <a href="" class="guide__section-list__item-link">Медицинское право</a>
+                        </li>
+                        <li class="guide__section-list__item">
+                            <a href="" class="guide__section-list__item-link">Миграционное право</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="guide__list-item guide__section">
+                    <p class="guide__section-title">Н</p>
+                    <ul class="guide__section-list">
+                        <li class="guide__section-list__item">
+                            <a href="" class="guide__section-list__item-link">Наследственное право</a>
+                        </li>
+                        <li class="guide__section-list__item">
+                            <a href="" class="guide__section-list__item-link">Недвижимость</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="guide__list-item guide__section">
+                    <p class="guide__section-title">О</p>
+                    <ul class="guide__section-list">
+                        <li class="guide__section-list__item">
+                            <a href="" class="guide__section-list__item-link">Образование</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="guide__list-item guide__section">
+                    <p class="guide__section-title">С</p>
+                    <ul class="guide__section-list">
+                        <li class="guide__section-list__item">
+                            <a href="" class="guide__section-list__item-link">Семейное право</a>
+                        </li>
+                        <li class="guide__section-list__item">
+                            <a href="" class="guide__section-list__item-link">Соцобеспечение</a>
+                        </li>
+                        <li class="guide__section-list__item">
+                            <a href="" class="guide__section-list__item-link">Судопроизводство</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="guide__list-item guide__section">
+                    <p class="guide__section-title">Т</p>
+                    <ul class="guide__section-list">
+                        <li class="guide__section-list__item">
+                            <a href="" class="guide__section-list__item-link">Таможенное право</a>
+                        </li>
+                        <li class="guide__section-list__item">
+                            <a href="" class="guide__section-list__item-link">Трудовое право</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="guide__list-item guide__section">
+                    <p class="guide__section-title">У</p>
+                    <ul class="guide__section-list">
+                        <li class="guide__section-list__item">
+                            <a href="" class="guide__section-list__item-link">Уголовное право</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="guide__list-item guide__section">
+                    <p class="guide__section-title">Ю</p>
+                    <ul class="guide__section-list">
+                        <li class="guide__section-list__item">
+                            <a href="" class="guide__section-list__item-link">Юридические услуги</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </footer>
+    </div>
+    <div class="menu__background"></div>
+    <div class="menu">
+        <nav class="nav">
+            <div class="nav__buttons">
+                <button class="nav__order-call nav__button">
+                    <img src="assets/phone.png" alt="" class="order-call__icon">
+                    <span class="order-call__text nav__button-text">Заказать звонок</span>
+                </button>
+                <a href="" class="nav__telegram nav__button">
+                    <img class="telegram__icon" src="assets/telegram.png" alt="">
+                    <span class="telegram__text nav__button-text">Telegram</span>
+                </a>
+            </div>
+            <div class="nav__login">
+                <img class="login__icon" src="assets/login.png" alt="">
+                <a class="login__link" href="">Вход / Регистрация</a>
+            </div>
+            <ul class="nav__main">
+                <li class="nav__main-item">
+                    <a href="" class="nav__main-item__link">Отзывы</a>
+                </li>
+                <li class="nav__main-item">
+                    <a href="" class="nav__main-item__link">Вопросы</a>
+                </li>
+                <li class="nav__main-item">
+                    <a href="" class="nav__main-item__link">Наши юристы</a>
+                </li>
+                <li class="nav__main-item">
+                    <a href="" class="nav__main-item__link">Статьи</a>
+                </li>
+                <li class="nav__main-item">
+                    <a href="" class="nav__main-item__link">Контакты</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <script src="src/scripts/script.js"></script>
+</body>
+
+</html>
