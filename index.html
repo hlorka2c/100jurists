@@ -18,20 +18,22 @@
 <body>
     <div class="container">
         <header class="header-mobile">
-            <div class="burger-menu">
+            <button class="burger-menu">
                 <span class="burger-menu__line burger-menu__line--up"></span>
                 <span class="burger-menu__line burger-menu__line--middle"></span>
                 <span class="burger-menu__line burger-menu__line--bottom"></span>
-            </div>
+            </button>
             <a href="/" class="header__logo">
                 <img src="assets/logo.png" alt="" class="logo">
             </a>
             <div class="header-mobile__buttons">
                 <button class="header-mobile__buttons__search header-mobile__buttons__item">
-                    <img class="header-mobile__buttons__search-icon header-mobile__buttons__item-icon" src="/assets/search-mobile.png" alt="">
+                    <img class="header-mobile__buttons__search-icon header-mobile__buttons__item-icon"
+                        src="/assets/search-mobile.png" alt="">
                 </button>
                 <button class="header-mobile__buttons__login header-mobile__buttons__item">
-                    <img class="header-mobile__buttons__login-icon header-mobile__buttons__item-icon" src="/assets/login.png" alt="">
+                    <img class="header-mobile__buttons__login-icon header-mobile__buttons__item-icon"
+                        src="/assets/login.png" alt="">
                 </button>
             </div>
         </header>
@@ -147,8 +149,8 @@
             </div>
         </main>
 
-        <section class="legal-help">
-            <h2 class="legal-help__title">Юридическая помощь</h2>
+        <section class="legal-help section">
+            <h2 class="legal-help__title section__title">Юридическая помощь</h2>
             <p class="legal-help__description section-description">
                 <span>
                     Срочно понадобились услуги профессионального юриста или адвоката? Решение есть! Наша горячая
@@ -163,8 +165,8 @@
                 </span>
             </p>
         </section>
-        <section class="tutorial">
-            <h2 class="tutorial__title">
+        <section class="tutorial section">
+            <h2 class="tutorial__title section__title">
                 Как получить бесплатную юридическую консультацию?
             </h2>
             <p class="tutorial__description section-description">
@@ -216,9 +218,12 @@
                 </li>
             </ul>
         </section>
-        <section class="call">
-            <img src="assets/circle.png" alt="" class="call__circle">
-            <img src="assets/call-woman.png" alt="" class="call__woman">
+        <section class="call section">
+            <div class="call__images section__title">
+                <img src="assets/circle.png" alt="" class="call__circle">
+                <img src="assets/circle__mobile.png" alt="" class="call__circle-mobile">
+                <img src="assets/call-woman.png" alt="" class="call__woman">
+            </div>
             <div class="call__inner">
                 <div class="call__action">
                     <div class="call__action-text">Звоните, мы работаем 24/7</div>
@@ -254,8 +259,8 @@
                 </div>
             </div>
         </section>
-        <section class="variants">
-            <h2 class="variants__title">
+        <section class="variants section">
+            <h2 class="variants__title section__title">
                 Как мы сможем помочь вам?
             </h2>
             <ul class="variants__list">
@@ -289,9 +294,9 @@
                 </li>
             </ul>
         </section>
-        <section class="about">
+        <section class="about section">
             <div class="about__main">
-                <h2 class="about__title">
+                <h2 class="about__title section__title">
                     Почему стоит выбрать нас?
                 </h2>
                 <p class="about__description section-description">
@@ -315,7 +320,7 @@
             </div>
             <img src="assets/about.png" class="about__img" alt="">
         </section>
-        <section class="order-call">
+        <section class="order-call section">
             <div class="order-call__phone">
                 <span class="order-call__phone-text">Телефон горячей линии</span>
                 <a href="tel:+78003029270" class="order-call__phone-number">8 800 302-92-70</a>
@@ -329,14 +334,14 @@
                     </div>
                     <button class="input-wrapper__button">Заказать звонок</button>
                 </div>
-                <span class="order-call__form__text">
+                <span class="form__agreement">
                     Отправляя вопрос, вы соглашаетесь с условиями <a href="/"
-                        class="order-call__form__text-agreement">Пользовательского соглашения</a>
+                        class="form__agreement-link">Пользовательского соглашения</a>
                 </span>
             </form>
         </section>
-        <section class="specialties">
-            <h2 class="specialties__title">Специальности наших юристов</h2>
+        <section class="specialties section">
+            <h2 class="specialties__title section__title">Специальности наших юристов</h2>
             <ul class="specialties__list">
                 <li class="specialties__list__item">
                     <div class="specialties__list__item-title">
@@ -448,8 +453,8 @@
                 </li>
             </ul>
         </section>
-        <section class="send-question">
-            <h2 class="send-question__title">
+        <section class="send-question section">
+            <h2 class="send-question__title section__title">
                 Задайте вопрос
                 <br>
                 юристу бесплатно
@@ -463,16 +468,16 @@
                     </div>
                     <button class="input-wrapper__button">Заказать звонок</button>
                 </div>
-                <span class="order-call__form__text">
+                <span class="form__agreement">
                     Отправляя вопрос, вы соглашаетесь с условиями
                     <br>
-                    <a href="/" class="order-call__form__text-agreement">Пользовательского соглашения</a>
+                    <a href="/" class="form__agreement-link">Пользовательского соглашения</a>
                 </span>
             </form>
             <img src="assets/send-q.png" alt="" class="send-question__image">
         </section>
-        <section class="seo">
-            <h2 class="seo__title">Блок для текста SEO</h2>
+        <section class="seo section">
+            <h2 class="seo__title section__title">Блок для текста SEO</h2>
             <p class="seo__description">
                 <span>
                     Срочно понадобились услуги профессионального юриста или адвоката? Решение есть! Наша горячая
@@ -496,14 +501,14 @@
                 Показать весь текст
             </button>
         </section>
-        <section class="reviews">
+        <section class="reviews section">
             <button class="slider-left slider-button disable">
                 <img src="assets/slider-l.png" alt="">
             </button>
             <button class="slider-right slider-button">
                 <img src="assets/slider-r.png" alt="">
             </button>
-            <h2 class="reviews__title">
+            <h2 class="reviews__title section__title">
                 Отзывы наших клиентов
             </h2>
             <div class="reviews__wrap">
@@ -737,8 +742,8 @@
                 </ul>
             </div>
         </section>
-        <section class="jurists">
-            <h2 class="jurists__title">Юристы портала</h2>
+        <section class="jurists section">
+            <h2 class="jurists__title section__title">Юристы портала</h2>
             <div class="jurists__main">
                 <div class="jurists__main-group jurists__main-content">
                     <ul class="jurists__list">
@@ -1008,6 +1013,9 @@
     </div>
     <div class="menu__background"></div>
     <div class="menu">
+        <button class="menu__close">
+            <img src="assets/close.png" class="menu__close-icon" alt="">
+        </button>
         <nav class="nav">
             <div class="nav__buttons">
                 <button class="nav__order-call nav__button">
@@ -1018,10 +1026,10 @@
                     <img class="telegram__icon" src="assets/telegram.png" alt="">
                     <span class="telegram__text nav__button-text">Telegram</span>
                 </a>
-            </div>
-            <div class="nav__login">
-                <img class="login__icon" src="assets/login.png" alt="">
-                <a class="login__link" href="">Вход / Регистрация</a>
+                <div class="nav__login">
+                    <img class="login__icon" src="assets/login.png" alt="">
+                    <a class="login__link" href="">Вход / Регистрация</a>
+                </div>
             </div>
             <ul class="nav__main">
                 <li class="nav__main-item">
@@ -1041,6 +1049,67 @@
                 </li>
             </ul>
         </nav>
+    </div>
+    <div class="search search-mobile">
+        <button class="search__close">
+            <img src="assets/close.png" class="search__close-icon">
+        </button>
+        <div class="search__inner">
+            <input placeholder="Я хочу найти..." type="text" class="search__input">
+            <button class="search__button">
+                <img src="assets/search.png" alt="" class="search__button-icon">
+            </button>
+        </div>
+    </div>
+    <div class="popup">
+        <img src="assets/close.png" alt="" class="popup__close">
+        <h3 class="popup__title">
+            Бесплатная юридическая консультация по телефону
+        </h3>
+        <div class="form-row">
+            <div class="input-wrapper">
+                <label for="order-phone" class="input-wrapper__label">Номер телефона</label>
+                <input type="tel" id="order-phone" class="input-wrapper__input">
+            </div>
+            <div class="input-wrapper">
+                <label for="order-name" class="input-wrapper__label">Ваше имя</label>
+                <input type="text" id="order-name" class="input-wrapper__input">
+            </div>
+            <button class="input-wrapper__button">Отправить</button>
+        </div>
+        <span class="form__agreement">
+            Отправляя вопрос, вы соглашаетесь с условиями <a href="/" class="form__agreement-link">Пользовательского
+                соглашения</a>
+        </span>
+        <div class="popup__jurists">
+            <span class="popup__jurists-text">
+                64 юриста сейчас онлайн
+            </span>
+            <ul class="popup__jurists-list">
+                <li class="popup__jurists-list__item">
+                    <img src="assets/j1.png" alt="" class="popup__jurists-list__item-image">
+                </li>
+                <li class="popup__jurists-list__item">
+                    <img src="assets/j2.png" alt="" class="popup__jurists-list__item-image">
+                </li>
+                <li class="popup__jurists-list__item">
+                    <img src="assets/j3.png" alt="" class="popup__jurists-list__item-image">
+                </li>
+                <li class="popup__jurists-list__item">
+                    <img src="assets/j4.png" alt="" class="popup__jurists-list__item-image">
+                </li>
+                <li class="popup__jurists-list__item">
+                    <img src="assets/j5.png" alt="" class="popup__jurists-list__item-image">
+                </li>
+                <li class="popup__jurists-list__item">
+                    <img src="assets/j6.png" alt="" class="popup__jurists-list__item-image">
+                </li>
+                <li class="popup__jurists-list__item popup__jurists-list__more">
+                    <span>+59</span>
+                </li>
+            </ul>
+        </div>
+        <img src="/assets/call-woman-popup.png" class="popup__image" alt="">
     </div>
     <script src="src/scripts/script.js"></script>
 </body>

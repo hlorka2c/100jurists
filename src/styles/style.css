@@ -49,6 +49,127 @@ ul {
     padding: 0;
 }
 
+.popup {
+    position: fixed;
+    margin: auto auto;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 100;
+    width: 360px;
+    height: 527px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 20px;
+    z-index: -1;
+    transition: all 0.5s;
+    opacity: 0;
+}
+
+.popup.active {
+    opacity: 100;
+    z-index: 100;
+}
+
+.popup__close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.popup__image {
+    position: absolute;
+    bottom: -1px;
+    left: -1px;
+    border-bottom-left-radius: 20px;
+}
+
+.popup__jurists {
+    width: 100%;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: end;
+    margin-right: 15px;
+    max-width: 160px;
+    margin-left: auto;
+}
+
+.popup .input-wrapper {
+    padding: 5px 12px 7px;
+}
+
+.popup__jurists-list {
+    max-width: 160px;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    overflow: hidden;
+}
+
+.popup__jurists-list__item {
+    position: relative;
+    width: 40px;
+    height: 40px;
+}
+
+.popup__jurists-list__more {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #2F2B4380;
+    background-color: #F7F7F7;
+    border-radius: 20px;
+    padding: 12px 10px 12px 9px;
+}
+
+.popup__jurists-list__more span {
+    display: block;
+}
+
+.popup__jurists-list__item-image {
+    width: 40px;
+    height: 40px;
+}
+
+.popup__jurists-text {
+    color: var(--black);
+    font-size: 12px;
+    font-weight: 400;
+    width: 100%;
+}
+
+.popup .form__agreement {
+    color: #2F2B4380;
+    margin-top: 15px;
+    display: block;
+    font-size: 12px;
+}
+
+.popup__title {
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: -0.97px;
+}
+
+.popup .form-row {
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.popup .input-wrapper {
+    border: 1px solid rgba(47, 43, 67, 0.15);
+    height: 50px;
+}
+
+.popup .input-wrapper__button {
+    background-color: var(--black);
+    height: 53px;
+}
+
 
 .wrapper {
     display: flex;
@@ -58,8 +179,8 @@ ul {
 .container {
     padding: 40px 150px;
     max-width: 1440px;
+    margin: 0 auto;
     width: 100%;
-    z-index: 0;
 }
 
 .input-wrapper {
@@ -115,16 +236,22 @@ ul {
     top: 0;
     left: 0;
     right: 0;
-    padding: 19px 15px;
+    padding: 0 15px;
+    height: 62px;
     background-color: white;
-    z-index: 1;
+    z-index: 10;
 }
 
 .header-mobile__buttons {
     display: flex;
     gap: 15px;
     align-items: center;
-}   
+}
+
+.header-mobile__buttons__item {
+    display: flex;
+    align-items: center;
+}
 
 .burger-menu {
     display: flex;
@@ -145,6 +272,41 @@ ul {
 .search {
     flex-grow: 1;
     max-width: 928px;
+}
+
+.search-mobile {
+    width: 100%;
+    transition: all 0.3s;
+    transform: translateY(-100%);
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    right: 0;
+    max-width: unset;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    padding: 16px 32px;
+    padding-right: 48px;
+}
+
+.search__close {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 12px;
+    height: 24px;
+    width: 24px;
+    margin: auto 0;
+}
+
+.search-mobile .search__inner {
+    width: 100%;
+}
+
+.search-mobile.active {
+    transform: unset;
 }
 
 .search__inner {
@@ -364,7 +526,6 @@ ul {
     display: grid;
     column-gap: 30px;
     grid-template-columns: repeat(4, 1fr);
-
 }
 
 .main__advantages-item {
@@ -440,12 +601,14 @@ ul {
     border-radius: 20px;
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
-    padding: 38px 0px 50px 0px;
+    justify-content: space-between;
     margin-top: 80px;
     overflow: hidden;
     position: relative;
+    max-height: 200px;
     padding-right: 117px;
+    padding-top: 0;
+    padding-bottom: 0;
 }
 
 .call__inner {
@@ -454,7 +617,24 @@ ul {
     align-items: center;
     justify-content: flex-end;
     gap: 116px;
-    max-width: 658px;
+}
+
+.call__images {
+    height: 200px;
+    position: relative;
+    max-width: 334px;
+    width: 100%;
+}
+
+.call__circle {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    min-height: 150px;
+}
+
+.call__circle-mobile {
+    display: none;
 }
 
 .call__action {
@@ -504,6 +684,7 @@ ul {
     height: 62px;
     position: relative;
     transition: all 0.3s;
+    display: flex;
 }
 
 .call__jurists-list__more {
@@ -518,18 +699,13 @@ ul {
     height: 62px;
 }
 
-.call__circle {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-}
-
 .call__woman {
     position: absolute;
     height: 0;
     bottom: 0;
     left: 36px;
     height: 100%;
+    min-height: 150px;
 }
 
 .variants {
@@ -560,6 +736,7 @@ ul {
 
 .variants__list__item-text a {
     font-weight: 700;
+    text-wrap: nowrap;
 }
 
 .about {
@@ -579,6 +756,7 @@ ul {
 .about__img {
     max-width: 560px;
     max-height: 385px;
+    width: 100%;
 }
 
 .about__advantages {
@@ -649,12 +827,12 @@ ul {
     gap: 15px;
 }
 
-.order-call__form__text {
+.form__agreement {
     font-size: 12px;
     color: #FFFFFF80;
 }
 
-.order-call__form__text-agreement {
+.form__agreement-link {
     font-size: 12px;
     text-decoration: underline;
 }
@@ -746,6 +924,7 @@ ul {
 .send-question .order-call__form__text {
     color: var(--light-grey);
     margin-top: 18px;
+    text-wrap: auto;
 }
 
 .send-question .order-call__form__text-agreement {
@@ -795,7 +974,6 @@ ul {
 .slider-button.disable {
     opacity: 0;
     cursor: default;
-    /* display: none; */
     z-index: -1;
 }
 
@@ -813,6 +991,7 @@ ul {
     flex-direction: row;
     gap: 20px;
     z-index: 1;
+    position: relative;
 }
 
 .reviews__wrap {
@@ -1109,15 +1288,21 @@ ul {
 }
 
 .menu {
-    position: absolute;
+    position: fixed;
     z-index: 100;
     width: 45%;
     height: 100%;
     background-color: white;
     padding: 20px 75px;
     left: 0;
+    top: 0;
     transform: translateX(-100%);
     transition: all 0.5s;
+    display: none;
+}
+
+.menu.active {
+    transform: unset;
 }
 
 .menu .nav {
@@ -1137,27 +1322,39 @@ ul {
     align-items: start;
 }
 
-.menu .login__icon {
+/* .menu .login__icon {
     display: none;
-}
+} */
 
 .menu__background {
-    position: absolute;
+    position: fixed;
     width: 100%;
     height: 100%;
     background-color: black;
-    /* opacity: 50%; */
     opacity: 0%;
     transition: all 0.5s;
-    z-index: 99;
+    z-index: -1;
     top: 0;
     bottom: 0;
     left: 0;
-    right: 0;
-    display: none;
+}
+
+.menu__background.active {
+    z-index: 99;
+    opacity: 50%;
 }
 
 @media screen and (max-width: 1440px) {
+    .variants__list {
+        grid-auto-rows: max-content;
+    }
+
+    .jurists__main-content .jurists__list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        width: 100% !important;
+    }
+
     .nav {
         gap: 25px;
     }
@@ -1178,9 +1375,28 @@ ul {
     }
 
     .main__advantages {
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2, 1fr);
+        grid-template-rows: unset;
+        grid-template-columns: unset;
         grid-row-gap: 15px;
+        grid-template-areas:
+            "second first"
+            "third fourth";
+    }
+
+    .main__advantages-item:nth-child(0) {
+        grid-area: first;
+    }
+
+    .main__advantages-item:nth-child(1) {
+        grid-area: second;
+    }
+
+    .main__advantages-item:nth-child(2) {
+        grid-area: third;
+    }
+
+    .main__advantages-item:nth-child(3) {
+        grid-area: fourth;
     }
 
     .main__actions-phone__number {
@@ -1245,6 +1461,7 @@ ul {
 
     .send-question__title {
         width: 100%;
+        margin-right: 0;
     }
 
     .send-question__title br {
@@ -1285,11 +1502,27 @@ ul {
     .jurists__main-group.jurists__main-content {
         width: 100%;
     }
+
+    .call {
+        padding-right: 24px;
+    }
+
+    .call__action-text {
+        font-size: 18px;
+    }
+
+    .call__action-number {
+        font-size: 36px;
+    }
 }
 
 @media screen and (max-width: 1280px) {
     .question__text {
         display: none;
+    }
+
+    .jurists__main-content .jurists__list {
+        grid-template-columns: repeat(1, 1fr);
     }
 
     .order-call {
@@ -1315,12 +1548,35 @@ ul {
     .login__link {
         display: none;
     }
+
+    .call__inner {
+        gap: 32px;
+        justify-content: space-between;
+    }
 }
 
 @media screen and (max-width: 1080px) {
     .order-call__phone {
         flex-direction: column;
         align-items: start;
+    }
+
+    .menu {
+        display: block;
+    }
+
+    .variants__list {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .variants__list__item {
+        flex-direction: column;
+        align-items: start;
+        gap: 15px;
+    }
+
+    .variants__list__item-text {
+        padding: 0;
     }
 
     .header-mobile {
@@ -1335,8 +1591,33 @@ ul {
         display: none;
     }
 
+    .menu__close {
+        position: absolute;
+        right: 24px;
+    }
+
+    .menu .nav {
+        display: flex;
+    }
+
+    .menu .login__link {
+        display: block;
+    }
+
+    .menu .nav__buttons {
+        flex-direction: column;
+    }
+
+    .menu .nav__button {
+        justify-content: center;
+    }
+
+    .menu .nav__login {
+        justify-content: center;
+    }
+
     .container {
-        padding: 0 150px;
+        padding: 0 75px;
     }
 
     .breadcrumbs {
@@ -1377,14 +1658,61 @@ ul {
     .call {
         justify-content: unset;
         width: 100%;
+        flex-direction: column;
+        max-height: unset;
+        padding: 30px 27px 30px;
+        padding-bottom: 76px;
+    }
+
+    .call__images {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    }
+
+    .call__woman {
+        display: none;
+    }
+
+    .call__circle {
+        display: none;
+    }
+
+    .call__jurists-list__item {
+        width: 40px;
+        height: 40px;
+        min-width: 40px;
+        min-height: 40px;
+    }
+
+    .call__jurists-list__more {
+        min-width: 40px;
+        min-height: 40px;
+    }
+
+    .call__jurists-list {
+        max-width: 200px;
+        left: 16px;
+        position: relative;
+    }
+
+    .call__circle-mobile {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        min-height: 150px;
+        display: block;
+    }
+
+    .call__circle-mobile {
+        display: block;
     }
 
     .call__inner {
         flex-direction: column;
         align-items: unset;
         width: 100%;
-        padding-left: 30px;
-        padding-right: 27px;
+        gap: 37px;
     }
 
     .call__action {
@@ -1395,9 +1723,307 @@ ul {
         right: unset;
         align-items: flex-end;
     }
+}
 
-    .call__jurists-list {
-        position: relative;
-        left: 186px;
+@media screen and (max-width: 800px) {
+    .container {
+        padding: 0 15px;
+    }
+
+    .tutorial__variants {
+        gap: 10px;
+        margin-top: 20px;
+    }
+
+    .tutorial__variants__item {
+        max-height: 191px;
+    }
+
+    .guide {
+        margin-bottom: 157px;
+    }
+
+    .main__actions {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+
+    .main__actions-phone {
+        width: min-content;
+    }
+
+    .main__actions-phone__text {
+        text-wrap: nowrap;
+    }
+
+    .main__actions-button {
+        width: 100%;
+    }
+
+    .slider-left {
+        left: -16px;
+        z-index: 90;
+    }
+
+    .reviews__wrap {
+        overflow: scroll;
+    }
+
+    .slider-button {
+        display: none;
+    }
+
+    .reviews__list__item {
+        min-width: 320px;
+    }
+
+    .guide__list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .breadcrumbs__item {
+        font-size: 12px;
+    }
+
+    .breadcrumbs__item-link {
+        font-size: 12px;
+    }
+
+    .main__actions {
+        margin-top: 29px;
+        gap: 20px;
+    }
+
+    .main__title {
+        font-size: 22px;
+    }
+
+    .main__description {
+        font-size: 14px;
+    }
+
+    .main__actions-button {
+        font-size: 14px;
+    }
+
+    .main__advantages-item__text {
+        font-size: 14px;
+    }
+
+    .section .section__title {
+        font-size: 20px;
+    }
+
+    .tutorial__variants__item-text {
+        font-size: 14px;
+    }
+
+    .section p,
+    .section p span {
+        font-size: 14px;
+    }
+
+    .tutorial__variants__item-phone {
+        font-size: 18px;
+        text-wrap: nowrap;
+    }
+
+    .tutorial__variants__item-action {
+        font-size: 14px;
+    }
+
+    .call__jurists-text {
+        font-size: 14px;
+    }
+
+    .about__advantages__item-number {
+        font-size: 20px;
+    }
+
+    .about__advantages__item-text {
+        font-size: 12px;
+    }
+
+    .order-call__phone-text {
+        font-size: 18px;
+    }
+
+    .order-call__phone-number {
+        font-size: 36px;
+    }
+
+    .order-call__form__title {
+        font-size: 16px;
+        margin-top: 15px;
+    }
+
+    .order-call__phone {
+        gap: 5px;
+    }
+
+    .order-call__form__main {
+        flex-direction: column;
+    }
+
+    .order-call {
+        padding: 20px;
+    }
+
+    .order-call__phone {
+        padding-top: 0;
+    }
+
+    .specialties__list {
+        display: flex;
+        overflow: scroll;
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .specialties__list__item-title__text {
+        font-size: 14px;
+    }
+
+    .specialties__list__item {
+        min-width: 320px;
+    }
+
+    .send-question__title {
+        font-size: 24px;
+        text-wrap: auto;
+    }
+
+    .input-wrapper__button {
+        font-size: 14px;
+    }
+
+    .send-question {
+        padding: 20px 20px 0 20px;
+    }
+
+    .seo__more {
+        font-size: 14px;
+        padding: 15px 0 16px 0;
+    }
+
+    .reviews__list-item-username {
+        font-size: 16px;
+    }
+
+    .reviews__list-item-date {
+        font-size: 12px;
+    }
+
+    .reviews__list__item-question-label {
+        font-size: 12px;
+    }
+
+    .reviews__list__item-question-main {
+        font-size: 14px;
+    }
+
+    .jurists__list__item-link {
+        align-items: center;
+    }
+
+    .jurists__list__item-image {
+        width: 50px;
+        height: 50px;
+    }
+
+    .jurists__list__item-name {
+        font-size: 14px;
+    }
+
+    .jurists__list__item-desc {
+        font-size: 12px;
+    }
+
+    .jurists__list__item-more {
+        font-size: 12px;
+    }
+
+    .jurists__link {
+        font-size: 14px;
+    }
+
+    .jurists__request__title {
+        font-size: 20px;
+    }
+
+    .jurists__request__description {
+        font-size: 12px;
+    }
+
+    .jurists__request {
+        padding: 20px;
+    }
+
+    .jurists__requst__form-main {
+        height: 180px;
+    }
+
+    .form-row {
+        flex-direction: column;
+    }
+
+    .jurists__request__form .input-wrapper__button {
+        font-size: 16px;
+    }
+
+    .jurists__request__form .form-subtext {
+        font-size: 12px;
+    }
+
+    .jurists__request__form .form-info {
+        flex-direction: row;
+    }
+
+    .form-info__item-main {
+        font-size: 16px;
+    }
+
+    .form-info__item-sub {
+        font-size: 12px;
+    }
+
+    .guide__title {
+        font-size: 20px;
+    }
+
+    .guide__section-title {
+        font-size: 18px;
+    }
+
+    .guide__section-list__item-link {
+        font-size: 12px;
+    }
+
+    .jurists__link {
+        padding-top: 15px;
+        padding-bottom: 16px;
+    }
+
+    .reviews__list {
+        gap: 10px;
+    }
+
+    .menu {
+        width: 75%;
+    }
+}
+
+@media screen and (max-width: 390px) {
+    .tutorial__variants__item {
+        max-height: none;
+    }
+
+    .tutorial__variants {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .menu {
+        width: 100%;
     }
 }
