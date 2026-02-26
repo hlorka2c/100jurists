@@ -1,0 +1,78 @@
+@media screen and (min-width: 1080px) {
+    input:hover {
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: var(--green-accent);
+    }
+
+    .nav__button:hover {
+        background-color: var(--light-grey-plus);
+    }
+
+    .nav__main-item:hover {
+        color: var(--green-accent);
+    }
+
+    .main__actions-phone__number:hover {
+        color: var(--green-accent);
+    }
+
+    .main__actions-phone__number:hover::after {
+        background-color: var(--green-accent);
+    }
+
+    .tutorial__variants__item-action:hover {
+        color: var(--green-accent);
+        background-color: unset;
+    }
+
+    .order-call .input-wrapper__button:hover {
+        color: var(--green);
+        background-color: white;
+    }
+
+    .form__agreement-link:hover {
+        color: white;
+        cursor: pointer;
+    }
+
+    .send-question .input-wrapper__button:hover {
+        color: var(--green);
+        background-color: white;
+        outline: 1px solid var(--green);
+    }
+
+    .seo__more:hover {
+        background-color: var(--green);
+        color: white;
+    }
+
+    .reviews__list__item-question-main:hover {
+        color: var(--green-accent);
+    }
+
+    .jurists__link:hover {
+        color: white;
+        background-color: var(--green);
+    }
+
+    .jurists .input-wrapper__button:hover {
+        color: var(--black);
+        background: white;
+        outline: 1px solid var(--black);
+    }
+
+    .guide__section-list__item-link:hover {
+        color: var(--green);
+    }
+
+    .search__button:hover {
+        background-color: unset;
+    }
+
+    .search:hover {
+        cursor: pointer;
+    }
+}

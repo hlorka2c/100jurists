@@ -19,6 +19,10 @@ input {
     border-radius: 10px;
 }
 
+.search__input::placeholder {
+    color: rgba(47, 43, 67, 0.4);
+}
+
 input:focus {
     outline: none;
 }
@@ -42,6 +46,7 @@ button {
     border: none;
     background: none;
     cursor: pointer;
+    transition: all 0.3s;
 }
 
 ul {
@@ -334,9 +339,6 @@ ul {
     border: none;
     padding: 0;
     border-radius: 10px;
-}
-
-.question__inner {
     background: var(--green);
     color: white;
     padding: 10px;
@@ -393,6 +395,7 @@ ul {
 
 .nav__main-item {
     text-wrap: nowrap;
+    transition: all 0.3s;
 }
 
 .nav__buttons {
@@ -411,6 +414,7 @@ ul {
     color: var(--black);
     font-weight: 400;
     text-wrap: nowrap;
+    transition: all 0.3s;
 }
 
 .nav__button-text {
@@ -468,10 +472,10 @@ ul {
     flex-direction: row;
     margin-top: 30px;
     gap: 30px;
+    align-items: center;
 }
 
 .main__image-wrapper {
-    /* width: 100%; */
     align-items: center;
     vertical-align: middle;
 }
@@ -492,6 +496,7 @@ ul {
     color: white;
     font-weight: 600;
     text-wrap: nowrap;
+    height: 56px;
 }
 
 .main__actions-phone {
@@ -504,6 +509,7 @@ ul {
     color: var(--green);
     font-size: 24px;
     text-wrap: nowrap;
+    transition: all 0.3s;
 }
 
 .main__actions-phone__number::after {
@@ -518,6 +524,7 @@ ul {
     color: var(--grey);
     font-size: 12px;
     margin-top: 5px;
+    /* text-wrap: nowrap; */
 }
 
 .main__advantages {
@@ -835,6 +842,7 @@ ul {
 .form__agreement-link {
     font-size: 12px;
     text-decoration: underline;
+    transition: all 0.3s;
 }
 
 .specialties {
@@ -1150,6 +1158,7 @@ ul {
     font-weight: 600;
     text-align: center;
     border-radius: 10px;
+    transition: all 0.3s;
 }
 
 .jurists__request {
@@ -1287,6 +1296,10 @@ ul {
     gap: 10px;
 }
 
+.guide__section-list__item-link {
+    transition: all 0.3s;
+}
+
 .menu {
     position: fixed;
     z-index: 100;
@@ -1321,10 +1334,6 @@ ul {
     flex-direction: column;
     align-items: start;
 }
-
-/* .menu .login__icon {
-    display: none;
-} */
 
 .menu__background {
     position: fixed;
@@ -1767,7 +1776,7 @@ ul {
     }
 
     .reviews__wrap {
-        overflow: scroll;
+        overflow-x: scroll;
     }
 
     .slider-button {
@@ -1876,7 +1885,7 @@ ul {
 
     .specialties__list {
         display: flex;
-        overflow: scroll;
+        overflow-x: scroll;
         flex-direction: row;
         gap: 10px;
     }
