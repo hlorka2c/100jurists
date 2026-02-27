@@ -101,4 +101,8 @@
     .popup .form__agreement-link:hover {
         color: var(--green);
     }
+
+    .slider-button:hover {
+        background-color: var(--light-grey-plus);
+    }
 }
