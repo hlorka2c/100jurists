@@ -83,4 +83,22 @@
     .input-wrapper:hover {
         cursor: pointer;
     }
+
+    .popup__success-close:hover {
+        cursor: pointer;
+    }
+
+    .popup__close:hover {
+        cursor: pointer;
+    }
+
+    .popup .input-wrapper__button:hover {
+        color: var(--black);
+        background-color: white;
+        outline: 1px solid var(--black);
+    }
+
+    .popup .form__agreement-link:hover {
+        color: var(--green);
+    }
 }

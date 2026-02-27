@@ -20,6 +20,10 @@ const searchCloseButton = document.querySelector(".search__close");
 const popupJuristsList = document.querySelectorAll(".popup__jurists-list__item");
 const popupButton = document.querySelector(".main__actions-button");
 const popup = document.querySelector(".popup");
+const popupSuccess = document.querySelector(".popup__success");
+const popupSuccessButton = document.querySelector(".popup__success-button");
+const popupButtonSend = document.querySelector(".popup .input-wrapper__button");
+const popupSuccessClose = document.querySelector(".popup__success-close");
 const questionButton = document.querySelector(".question");
 const popupCloseButton = document.querySelector(".popup__close");
 const actionButtons = document.querySelectorAll(".tutorial__variants__item-action");
@@ -92,6 +96,23 @@ document.addEventListener("DOMContentLoaded", () => {
         menuBackground.classList.remove("active");
     })
 
+    popupButtonSend.addEventListener("click", (e) => {
+        e.preventDefault();
+        popupSuccess.classList.add("active");
+    })
+
+    popupSuccessClose.addEventListener("click", () => {
+        popup.classList.remove("active");
+        popupSuccess.classList.remove("active");
+        menuBackground.classList.remove("active");
+    });
+
+    popupSuccessButton.addEventListener("click", () => {
+        popup.classList.remove("active");
+        popupSuccess.classList.remove("active");
+        menuBackground.classList.remove("active");
+    })
+
     window.addEventListener("resize", () => {
         if (window.innerWidth <= 1080 && desctopFormat === true) {
             desctopFormat = false;
@@ -114,8 +135,6 @@ document.addEventListener("DOMContentLoaded", () => {
         searchMobile.classList.remove("active");
         menuBackground.classList.remove("active");
     })
-
-    
 });
 
 function showMenu() {
