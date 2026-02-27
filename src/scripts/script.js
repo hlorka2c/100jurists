@@ -22,13 +22,13 @@ const popupButton = document.querySelector(".main__actions-button");
 const popup = document.querySelector(".popup");
 const popupSuccess = document.querySelector(".popup__success");
 const popupSuccessButton = document.querySelector(".popup__success-button");
-const formButtons = document.querySelectorAll(".input-wrapper__button");
 const popupButtonSend = document.querySelector(".popup .input-wrapper__button");
 const popupSuccessClose = document.querySelector(".popup__success-close");
 const questionButton = document.querySelector(".question");
 const popupCloseButton = document.querySelector(".popup__close");
 const actionButtons = document.querySelectorAll(".tutorial__variants__item-action");
 const inputWrappers = document.querySelectorAll(".input-wrapper");
+const forms = document.querySelectorAll("form");
 
 let leftValue = 0,
     textState = 0,
@@ -100,9 +100,7 @@ document.addEventListener("DOMContentLoaded", () => {
     popupButtonSend.addEventListener("click", (e) => {
         e.preventDefault();
         popup.classList.remove("active");
-        setTimeout(() => {
-            popupSuccess.classList.add("active");
-        }, 300);
+        popupSuccess.classList.add("active");
     })
 
     popupSuccessClose.addEventListener("click", () => {
@@ -115,8 +113,9 @@ document.addEventListener("DOMContentLoaded", () => {
         menuBackground.classList.remove("active");
     })
 
-    formButtons.forEach((button) => {
-        button.addEventListener("click", (e) => {
+    forms.forEach((form) => {
+        console.log(form);
+        form.addEventListener("submit", (e) => {
             e.preventDefault();
             popupSuccess.classList.add("active");
             menuBackground.classList.add("active");

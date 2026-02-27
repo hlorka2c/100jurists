@@ -170,6 +170,16 @@ ul {
     height: 53px;
 }
 
+.popup * {
+    opacity: 0;
+    transition: opacity 0.1s;
+}
+
+.popup.active * {
+    opacity: 100;
+}
+
+
 .popup__success {
     position: fixed;
     z-index: -1;
@@ -188,6 +198,15 @@ ul {
     align-items: center;
     opacity: 0;
     transition: opacity 0.3s;
+}
+
+.popup__success * {
+    opacity: 0;
+    transition: opacity 0.1s;
+}
+
+.popup__success.active * {
+    opacity: 100;
 }
 
 .popup__success.active {
