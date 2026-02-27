@@ -102,10 +102,6 @@ ul {
     margin-left: auto;
 }
 
-.popup .input-wrapper {
-    padding: 5px 12px 7px;
-}
-
 .popup__jurists-list {
     max-width: 160px;
     display: flex;
@@ -166,7 +162,6 @@ ul {
 }
 
 .popup .input-wrapper {
-    border: 1px solid rgba(47, 43, 67, 0.15);
     height: 50px;
 }
 
@@ -189,19 +184,41 @@ ul {
 }
 
 .input-wrapper {
-    background: white;
-    padding: 7px 16px 8px 16px;
-    display: flex;
-    flex-direction: column;
-    gap: 3px;
-    align-items: start;
-    min-width: 249px;
-    border-radius: 10px;
+    position: relative;
+    height: 56px;
 }
 
 .input-wrapper__label {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 0.2s ease;
+    pointer-events: none;
+    font-size: 16px;
+    background: transparent;
+    padding: 0;
+    margin-bottom: 3px;
+    z-index: 1;
+    color: var(--black);
+}
+
+.input-wrapper__input {
+    width: 100%;
+    padding: 26px 16px 8px 16px;
+    box-sizing: border-box;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    color: var(--black);
+    border-radius: 6px;
+    background: #fff;
+    height: 100%;
+}
+
+.field:focus-within .input-wrapper__label {
+    top: 7px;
+    transform: translateY(0);
     font-size: 12px;
-    font-weight: 400;
     color: var(--light-grey);
 }
 
@@ -524,7 +541,6 @@ ul {
     color: var(--grey);
     font-size: 12px;
     margin-top: 5px;
-    /* text-wrap: nowrap; */
 }
 
 .main__advantages {
@@ -918,7 +934,6 @@ ul {
 }
 
 .send-question .input-wrapper {
-    border: 1px solid var(--light-grey-plus);
     max-width: 201px;
     min-width: 0;
     width: 100%;
@@ -1206,6 +1221,7 @@ ul {
     display: flex;
     flex-direction: row;
     flex-grow: 3;
+    color: var(--black);
 }
 
 .jurists__requst__form-main::placeholder {

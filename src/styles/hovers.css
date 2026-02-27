@@ -1,4 +1,8 @@
 @media screen and (min-width: 1080px) {
+    label:hover {
+        cursor: pointer;
+    }
+
     input:hover {
         cursor: pointer;
     }
@@ -73,6 +77,10 @@
     }
 
     .search:hover {
+        cursor: pointer;
+    }
+
+    .input-wrapper:hover {
         cursor: pointer;
     }
 }

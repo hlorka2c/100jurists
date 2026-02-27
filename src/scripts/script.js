@@ -23,6 +23,7 @@ const popup = document.querySelector(".popup");
 const questionButton = document.querySelector(".question");
 const popupCloseButton = document.querySelector(".popup__close");
 const actionButtons = document.querySelectorAll(".tutorial__variants__item-action");
+const inputWrappers = document.querySelectorAll(".input-wrapper");
 
 let leftValue = 0,
     textState = 0,
@@ -113,6 +114,8 @@ document.addEventListener("DOMContentLoaded", () => {
         searchMobile.classList.remove("active");
         menuBackground.classList.remove("active");
     })
+
+    
 });
 
 function showMenu() {
