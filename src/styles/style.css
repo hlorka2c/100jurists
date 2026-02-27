@@ -68,7 +68,7 @@ ul {
     padding: 20px;
     border-radius: 20px;
     z-index: -1;
-    transition: all 0.5s;
+    transition: opacity 0.3s;
     opacity: 0;
 }
 
@@ -171,13 +171,14 @@ ul {
 }
 
 .popup__success {
-    position: absolute;
-    height: 100%;
-    width: 100%;
+    position: fixed;
     z-index: -1;
     left: 0;
     right: 0;
     top: 0;
+    width: 360px;
+    height: 527px;
+    margin: auto auto;
     bottom: 0;
     padding: 122.5px 20px;
     background-color: white;
@@ -186,12 +187,16 @@ ul {
     flex-direction: column;
     align-items: center;
     opacity: 0;
-    transition: all 1s;
+    transition: opacity 0.3s;
 }
 
 .popup__success.active {
-    z-index: 102;
+    z-index: 101;
     opacity: 100;
+}
+
+.popup.active > .popup__success {
+    z-index: 101;
 }
 
 .popup__success-close {

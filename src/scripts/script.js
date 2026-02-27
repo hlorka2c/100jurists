@@ -22,6 +22,7 @@ const popupButton = document.querySelector(".main__actions-button");
 const popup = document.querySelector(".popup");
 const popupSuccess = document.querySelector(".popup__success");
 const popupSuccessButton = document.querySelector(".popup__success-button");
+const formButtons = document.querySelectorAll(".input-wrapper__button");
 const popupButtonSend = document.querySelector(".popup .input-wrapper__button");
 const popupSuccessClose = document.querySelector(".popup__success-close");
 const questionButton = document.querySelector(".question");
@@ -98,19 +99,28 @@ document.addEventListener("DOMContentLoaded", () => {
 
     popupButtonSend.addEventListener("click", (e) => {
         e.preventDefault();
-        popupSuccess.classList.add("active");
+        popup.classList.remove("active");
+        setTimeout(() => {
+            popupSuccess.classList.add("active");
+        }, 300);
     })
 
     popupSuccessClose.addEventListener("click", () => {
-        popup.classList.remove("active");
         popupSuccess.classList.remove("active");
         menuBackground.classList.remove("active");
     });
 
     popupSuccessButton.addEventListener("click", () => {
-        popup.classList.remove("active");
         popupSuccess.classList.remove("active");
         menuBackground.classList.remove("active");
+    })
+
+    formButtons.forEach((button) => {
+        button.addEventListener("click", (e) => {
+            e.preventDefault();
+            popupSuccess.classList.add("active");
+            menuBackground.classList.add("active");
+        })
     })
 
     window.addEventListener("resize", () => {
