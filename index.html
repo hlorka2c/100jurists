@@ -44,7 +44,7 @@
             </a>
             <div class="search">
                 <div class="search__inner">
-                    <input placeholder="Я хочу найти..." type="text" class="search__input">
+                    <input required placeholder="Я хочу найти..." type="text" class="search__input">
                     <button class="search__button">
                         <img src="assets/search.png" alt="" class="search__button-icon">
                     </button>
@@ -328,8 +328,8 @@
                 <div class="order-call__form__title">Заказать обратный звонок</div>
                 <div class="order-call__form__main">
                     <div class="input-wrapper field">
+                        <input minlength="10" required type="tel" id="phone" class="input-wrapper__input">
                         <label for="phone" class="input-wrapper__label">Номер телефона</label>
-                        <input type="tel" id="phone" class="input-wrapper__input">
                     </div>
                     <button class="input-wrapper__button">Заказать звонок</button>
                 </div>
@@ -461,8 +461,9 @@
             <form action="" class="order-call__form section__form">
                 <div class="order-call__form__main">
                     <div class="input-wrapper field">
+                        <input minlength="10" required type="tel" id="phone"
+                            class="input-wrapper__input">
                         <label for="phone" class="input-wrapper__label">Номер телефона</label>
-                        <input type="tel" pattern="\+\d-\d{3}-\d{3}-\d{4}" id="phone" class="input-wrapper__input">
                     </div>
                     <button class="input-wrapper__button">Заказать звонок</button>
                 </div>
@@ -814,12 +815,12 @@
                                 placeholder="Опишите вашу проблему..."></textarea>
                             <div class="form-row">
                                 <div class="input-wrapper field">
+                                    <input minlength="10" required type="tel" id="order-phone" class="input-wrapper__input">
                                     <label for="order-phone" class="input-wrapper__label">Номер телефона</label>
-                                    <input type="tel" id="order-phone" class="input-wrapper__input">
                                 </div>
                                 <div class="input-wrapper field">
+                                    <input minlength="10" required type="text" id="order-name" class="input-wrapper__input">
                                     <label for="order-name" class="input-wrapper__label">Ваше имя</label>
-                                    <input type="text" id="order-name" class="input-wrapper__input">
                                 </div>
                                 <button class="input-wrapper__button">Отправить</button>
                             </div>
@@ -1053,7 +1054,7 @@
             <img src="assets/close.png" class="search__close-icon">
         </button>
         <div class="search__inner">
-            <input placeholder="Я хочу найти..." type="text" class="search__input">
+            <input required placeholder="Я хочу найти..." type="text" class="search__input">
             <button class="search__button">
                 <img src="assets/search.png" alt="" class="search__button-icon">
             </button>
@@ -1064,14 +1065,14 @@
         <h3 class="popup__title">
             Бесплатная юридическая консультация по телефону
         </h3>
-        <form action="" class="popup__form form-row">
+        <form class="popup__form form-row">
             <div class="input-wrapper field">
+                <input minlength="10" maxlength="10" required type="tel" id="order-phone" class="input-wrapper__input">
                 <label for="order-phone" class="input-wrapper__label">Номер телефона</label>
-                <input type="tel" id="order-phone" class="input-wrapper__input">
             </div>
             <div class="input-wrapper field">
+                <input required type="text" id="order-name" class="input-wrapper__input">
                 <label for="order-name" class="input-wrapper__label">Ваше имя</label>
-                <input type="text" id="order-name" class="input-wrapper__input">
             </div>
             <button class="input-wrapper__button">Отправить</button>
         </form>
@@ -1118,6 +1119,7 @@
         <p class="popup__success-desc">Мы свяжемся с вами в течении х минут</p>
         <button class="popup__success-button">Закрыть окно</button>
     </div>
+    <script src="https://unpkg.com/imask"></script>
     <script src="src/scripts/script.js"></script>
 </body>
 

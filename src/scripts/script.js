@@ -22,12 +22,14 @@ const popupButton = document.querySelector(".main__actions-button");
 const popup = document.querySelector(".popup");
 const popupSuccess = document.querySelector(".popup__success");
 const popupSuccessButton = document.querySelector(".popup__success-button");
-const popupButtonSend = document.querySelector(".popup .input-wrapper__button");
 const popupSuccessClose = document.querySelector(".popup__success-close");
 const questionButton = document.querySelector(".question");
 const popupCloseButton = document.querySelector(".popup__close");
 const actionButtons = document.querySelectorAll(".tutorial__variants__item-action");
 const inputWrappers = document.querySelectorAll(".input-wrapper");
+const inputPhones = document.querySelectorAll("input[type='tel']")
+const popupForm = document.querySelector(".popup form");
+
 const forms = document.querySelectorAll("form");
 
 let leftValue = 0,
@@ -76,50 +78,57 @@ document.addEventListener("DOMContentLoaded", () => {
     })
 
     popupButton.addEventListener("click", () => {
-        popup.classList.add("active");
-        menuBackground.classList.add("active");
+        setActive(popup, menuBackground);
     });
 
     questionButton.addEventListener("click", () => {
-        popup.classList.add("active");
-        menuBackground.classList.add("active");
+        setActive(popup, menuBackground);
     });
 
     actionButtons.forEach((item) => {
         item.addEventListener("click", () => {
-            popup.classList.add("active");
-            menuBackground.classList.add("active");
+            setActive(popup, menuBackground);
         });
     })
 
     popupCloseButton.addEventListener("click", () => {
-        popup.classList.remove("active");
-        menuBackground.classList.remove("active");
+        unsetActive(popup, menuBackground);
     })
 
-    popupButtonSend.addEventListener("click", (e) => {
+    popupForm.addEventListener("submit", (e) => {
         e.preventDefault();
-        popup.classList.remove("active");
-        popupSuccess.classList.add("active");
+        unsetActive(popup);
+        setActive(popupSuccess);
     })
 
     popupSuccessClose.addEventListener("click", () => {
-        popupSuccess.classList.remove("active");
-        menuBackground.classList.remove("active");
+        unsetActive(popupSuccess, menuBackground);
     });
 
     popupSuccessButton.addEventListener("click", () => {
-        popupSuccess.classList.remove("active");
-        menuBackground.classList.remove("active");
+        unsetActive(popupSuccess, menuBackground);
     })
 
     forms.forEach((form) => {
-        console.log(form);
         form.addEventListener("submit", (e) => {
             e.preventDefault();
-            popupSuccess.classList.add("active");
-            menuBackground.classList.add("active");
+            if (!form.checkValidity()) {
+                form.reportValidity();
+            } else {
+                console.log(form.querySelector("input[type='tel']").value.length);
+
+                form.querySelectorAll("input").forEach((input) => input.value = "");
+                setActive(popupSuccess, menuBackground);
+            }
         })
+    })
+
+    const maskOptions = {
+        mask: '+{7}(000)000-00-00'
+    };
+
+    inputPhones.forEach((input) => {
+        const mask = IMask(input, maskOptions);
     })
 
     window.addEventListener("resize", () => {
@@ -136,27 +145,13 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     searchMobileButton.addEventListener("click", () => {
-        searchMobile.classList.add("active");
-        menuBackground.classList.add("active");
+        setActive(searchMobile, menuBackground);
     })
 
     searchCloseButton.addEventListener("click", () => {
-        searchMobile.classList.remove("active");
-        menuBackground.classList.remove("active");
+        unsetActive(searchMobile, menuBackground);
     })
 });
-
-function showMenu() {
-    menuBackground.classList.add("active");
-    menu.classList.add("active");
-    document.body.style.overflow = "hidden";
-}
-
-function hideMenu() {
-    menuBackground.classList.remove("active");
-    menu.classList.remove("active");
-    document.body.style.overflow = "";
-}
 
 function addPX(value) {
     return value + "px";
@@ -188,6 +183,14 @@ function getSliderStepWidth(itemWidth) {
     gap = +getComputedStyle(list).gap.split("px")[0];
 
     return itemWidth + gap;
+}
+
+function setActive(...items) {
+    items.forEach(item => item.classList.add("active"));
+}
+
+function unsetActive(...items) {
+    items.forEach(item => item.classList.remove("active"));
 }
 
 function slide(direction) {
