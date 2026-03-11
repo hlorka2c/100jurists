@@ -54,6 +54,15 @@ ul {
     padding: 0;
 }
 
+input.error {
+    color: red;
+    border-color: red;
+}
+
+input.error + label {
+    color: red;
+}
+
 .popup {
     position: fixed;
     margin: auto auto;
@@ -154,6 +163,8 @@ ul {
     font-size: 22px;
     font-weight: 700;
     letter-spacing: -0.97px;
+    position: relative;
+    z-index: 100;
 }
 
 .popup .form-row {

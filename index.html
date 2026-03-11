@@ -7,8 +7,6 @@
     <title>Document</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="src/styles/colors.css">
@@ -327,9 +325,9 @@
             <form action="" class="order-call__form section__form">
                 <div class="order-call__form__title">Заказать обратный звонок</div>
                 <div class="order-call__form__main">
-                    <div class="input-wrapper field">
-                        <input minlength="10" required type="tel" id="phone" class="input-wrapper__input">
-                        <label for="phone" class="input-wrapper__label">Номер телефона</label>
+                    <div class="input-wrapper input-wrapper--phone field">
+                        <input required type="text" id="phoneOrderCall" class="input-wrapper__input">
+                        <label for="phoneOrderCall" class="input-wrapper__label">Номер телефона</label>
                     </div>
                     <button class="input-wrapper__button">Заказать звонок</button>
                 </div>
@@ -460,10 +458,9 @@
             </h2>
             <form action="" class="order-call__form section__form">
                 <div class="order-call__form__main">
-                    <div class="input-wrapper field">
-                        <input minlength="10" required type="tel" id="phone"
-                            class="input-wrapper__input">
-                        <label for="phone" class="input-wrapper__label">Номер телефона</label>
+                    <div class="input-wrapper input-wrapper--phone field">
+                        <input required type="text" id="phoneSendQuestion" class="input-wrapper__input">
+                        <label for="phoneSendQuestion" class="input-wrapper__label">Номер телефона</label>
                     </div>
                     <button class="input-wrapper__button">Заказать звонок</button>
                 </div>
@@ -814,12 +811,12 @@
                             <textarea id="order-request" type="text" class="jurists__requst__form-main"
                                 placeholder="Опишите вашу проблему..."></textarea>
                             <div class="form-row">
-                                <div class="input-wrapper field">
-                                    <input minlength="10" required type="tel" id="order-phone" class="input-wrapper__input">
-                                    <label for="order-phone" class="input-wrapper__label">Номер телефона</label>
+                                <div class="input-wrapper input-wrapper--phone field">
+                                    <input required type="text" id="juristsPhone" class="input-wrapper__input">
+                                    <label for="juristsPhone" class="input-wrapper__label">Номер телефона</label>
                                 </div>
-                                <div class="input-wrapper field">
-                                    <input minlength="10" required type="text" id="order-name" class="input-wrapper__input">
+                                <div class="input-wrapper field input-wrapper--name">
+                                    <input required type="text" id="order-name" class="input-wrapper__input">
                                     <label for="order-name" class="input-wrapper__label">Ваше имя</label>
                                 </div>
                                 <button class="input-wrapper__button">Отправить</button>
@@ -1061,16 +1058,16 @@
         </div>
     </div>
     <div class="popup">
-        <img src="assets/close.png" alt="" class="popup__close">
         <h3 class="popup__title">
             Бесплатная юридическая консультация по телефону
         </h3>
+        <img src="assets/close.png" alt="" class="popup__close">
         <form class="popup__form form-row">
-            <div class="input-wrapper field">
-                <input minlength="10" maxlength="10" required type="tel" id="order-phone" class="input-wrapper__input">
-                <label for="order-phone" class="input-wrapper__label">Номер телефона</label>
+            <div class="input-wrapper field input-wrapper--phone">
+                <input required type="text" id="popupPhone" class="input-wrapper__input">
+                <label for="popupPhone" class="input-wrapper__label">Номер телефона</label>
             </div>
-            <div class="input-wrapper field">
+            <div class="input-wrapper field input-wrapper--name">
                 <input required type="text" id="order-name" class="input-wrapper__input">
                 <label for="order-name" class="input-wrapper__label">Ваше имя</label>
             </div>
@@ -1121,6 +1118,7 @@
     </div>
     <script src="https://unpkg.com/imask"></script>
     <script src="src/scripts/script.js"></script>
+    <script src="src/scripts/mask.js"></script>
 </body>
 
 </html>

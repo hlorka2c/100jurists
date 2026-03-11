@@ -23,11 +23,11 @@ const popup = document.querySelector(".popup");
 const popupSuccess = document.querySelector(".popup__success");
 const popupSuccessButton = document.querySelector(".popup__success-button");
 const popupSuccessClose = document.querySelector(".popup__success-close");
+console.log(popupSuccessButton);
 const questionButton = document.querySelector(".question");
 const popupCloseButton = document.querySelector(".popup__close");
 const actionButtons = document.querySelectorAll(".tutorial__variants__item-action");
 const inputWrappers = document.querySelectorAll(".input-wrapper");
-const inputPhones = document.querySelectorAll("input[type='tel']")
 const popupForm = document.querySelector(".popup form");
 
 const forms = document.querySelectorAll("form");
@@ -95,12 +95,6 @@ document.addEventListener("DOMContentLoaded", () => {
         unsetActive(popup, menuBackground);
     })
 
-    popupForm.addEventListener("submit", (e) => {
-        e.preventDefault();
-        unsetActive(popup);
-        setActive(popupSuccess);
-    })
-
     popupSuccessClose.addEventListener("click", () => {
         unsetActive(popupSuccess, menuBackground);
     });
@@ -112,23 +106,31 @@ document.addEventListener("DOMContentLoaded", () => {
     forms.forEach((form) => {
         form.addEventListener("submit", (e) => {
             e.preventDefault();
-            if (!form.checkValidity()) {
-                form.reportValidity();
-            } else {
-                console.log(form.querySelector("input[type='tel']").value.length);
+            console.log("submit")
 
-                form.querySelectorAll("input").forEach((input) => input.value = "");
+            let phone = form.querySelector(".input-wrapper--phone input");
+            let name = form.querySelector(".input-wrapper--name input");
+            console.log(name)
+
+            if (phone.value.length === 16 && name.value) {
+                console.log("success");
                 setActive(popupSuccess, menuBackground);
+                if (form.classList.contains("popup__form")) unsetActive(popup);
+
+                phone.value = "";
+                name.value = "";
+            } else if (name.value) {
+                console.log("error");
+                phone.classList.add('error');
+                console.log(phone)
+
+                if (!name.value.trim()) {
+                    name.classList.add("error");
+                    setTimeout(() => name.classList.remove('error'), 600)
+                }
+                setTimeout(() => phone.classList.remove("error"), 600);
             }
         })
-    })
-
-    const maskOptions = {
-        mask: '+{7}(000)000-00-00'
-    };
-
-    inputPhones.forEach((input) => {
-        const mask = IMask(input, maskOptions);
     })
 
     window.addEventListener("resize", () => {
