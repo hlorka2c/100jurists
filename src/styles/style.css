@@ -54,12 +54,10 @@ ul {
     padding: 0;
 }
 
-input.error {
-    color: red;
-    border-color: red;
-}
-
-input.error + label {
+input.error,
+input.error+label,
+textarea.error,
+textarea.error+label {
     color: red;
 }
 
@@ -288,6 +286,30 @@ input.error + label {
     border-radius: 10px;
 }
 
+.input-wrapper.input-wrapper--textarea {
+    height: unset;
+    width: 100%;
+    padding: 12px 16px;
+    border-radius: 10px;
+    border: none;
+    height: 213px;
+    resize: none;
+    display: flex;
+    flex-direction: row;
+    color: var(--black);
+    max-width: unset !important;
+}
+
+.input-wrapper.input-wrapper--textarea textarea {
+    transition: all 0.3s;
+    opacity: 0;
+}
+
+.input-wrapper.input-wrapper--textarea .input-wrapper__label {
+    top: 22px;
+    margin-bottom: 20px;
+}
+
 .input-wrapper__label {
     position: absolute;
     left: 16px;
@@ -321,6 +343,13 @@ input.error + label {
     transform: translateY(0);
     font-size: 12px;
     color: var(--light-grey);
+}
+
+.field:focus-within textarea {
+    height: 169px;
+    margin-top: 16px;
+    opacity: 1;
+    transition: all 0.3s;
 }
 
 .input-wrapper__input:not(:focus) {
@@ -1323,14 +1352,13 @@ input.error + label {
 
 .jurists__requst__form-main {
     width: 100%;
-    padding: 12px 16px;
-    border-radius: 10px;
     border: none;
-    height: 213px;
+    height: 189px;
+    margin: 0;
+
     resize: none;
     display: flex;
     flex-direction: row;
-    flex-grow: 3;
     color: var(--black);
 }
 

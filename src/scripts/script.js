@@ -23,7 +23,6 @@ const popup = document.querySelector(".popup");
 const popupSuccess = document.querySelector(".popup__success");
 const popupSuccessButton = document.querySelector(".popup__success-button");
 const popupSuccessClose = document.querySelector(".popup__success-close");
-console.log(popupSuccessButton);
 const questionButton = document.querySelector(".question");
 const popupCloseButton = document.querySelector(".popup__close");
 const actionButtons = document.querySelectorAll(".tutorial__variants__item-action");
@@ -40,7 +39,8 @@ let leftValue = 0,
     containerWidth = 0,
     desctopFormat = true,
     list,
-    gap;
+    gap,
+    isPhoneLengthCorrect;
 
 
 
@@ -106,30 +106,45 @@ document.addEventListener("DOMContentLoaded", () => {
     forms.forEach((form) => {
         form.addEventListener("submit", (e) => {
             e.preventDefault();
-            console.log("submit")
 
-            let phone = form.querySelector(".input-wrapper--phone input");
-            let name = form.querySelector(".input-wrapper--name input");
-            console.log(name)
+            let phone = form.querySelector(".input-wrapper--phone input"),
+                name = form.querySelector(".input-wrapper--name input"),
+                textarea = form.querySelector("textarea");
 
-            if (phone.value.length === 16 && name.value) {
-                console.log("success");
-                setActive(popupSuccess, menuBackground);
-                if (form.classList.contains("popup__form")) unsetActive(popup);
+            let isFormContainName = !!name,
+                isFormContainTextArea = !!textarea,
+                isNameNotEmpty = isFormContainName ? !!name.value.trim() : false,
+                isTextareaNotEmpty = isFormContainTextArea ? !!textarea.value.trim() : false,
+                isPopupForm = form.classList.contains("popup__form"),
+                isFormValid;
 
-                phone.value = "";
-                name.value = "";
-            } else if (name.value) {
-                console.log("error");
-                phone.classList.add('error');
-                console.log(phone)
+            isPhoneLengthCorrect = phone.value.length === 16;
 
-                if (!name.value.trim()) {
-                    name.classList.add("error");
-                    setTimeout(() => name.classList.remove('error'), 600)
-                }
-                setTimeout(() => phone.classList.remove("error"), 600);
+            if (isFormContainTextArea) {
+                isFormValid = isPhoneLengthCorrect && isNameNotEmpty && isTextareaNotEmpty;
+
+                validateFormName(name);
+                validateFormPhone(phone);
+                validateFormTextarea(textarea);
+            } else if (isFormContainName) {
+                isFormValid = isPhoneLengthCorrect && isNameNotEmpty;
+
+                validateFormName(name);
+                validateFormPhone(phone);
+            } else {
+                isFormValid = isPhoneLengthCorrect;
+
+                validateFormPhone();
             }
+
+            if (!isFormValid) return;
+
+            setActive(popupSuccess, menuBackground);
+            if (isPopupForm) unsetActive(popup);
+
+            phone.value = "";
+            if (isFormContainName) name.value = "";
+            if (isFormContainTextArea) textarea.value = "";
         })
     })
 
@@ -137,11 +152,9 @@ document.addEventListener("DOMContentLoaded", () => {
         if (window.innerWidth <= 1080 && desctopFormat === true) {
             desctopFormat = false;
             juristsList.forEach(setLeft);
-            console.log("resize to mobile format");
         } else if (window.innerWidth > 1080 && desctopFormat === false) {
             desctopFormat = true;
             juristsList.forEach(setLeft);
-            console.log("resize to desc format")
         }
         leftValue = 0;
     });
@@ -154,6 +167,28 @@ document.addEventListener("DOMContentLoaded", () => {
         unsetActive(searchMobile, menuBackground);
     })
 });
+
+function validateFormName(name) {
+    if (!name.value.trim()) {
+        name.classList.add("error");
+        setTimeout(() => { name.classList.remove("error") }, 1000);
+    }
+}
+
+function validateFormPhone(phone) {
+    if (!isPhoneLengthCorrect) {
+        phone.classList.add("error");
+        setTimeout(() => { phone.classList.remove("error") }, 1000);
+    }
+}
+
+function validateFormTextarea(textarea) {
+    if (!textarea.value.trim()) {
+        textarea.classList.add("error");
+        setTimeout(() => { textarea.classList.remove("error") }, 1000);
+
+    }
+}
 
 function addPX(value) {
     return value + "px";
