@@ -2,34 +2,36 @@ const TEXT_STATES = ["140px", "auto"];
 const LEFT__VARIANTS = [31, 16, 24];
 const BUTTON_STATES = ["Показать весь текст", "Свернуть"];
 
+// Node variables
+
+const menuNode = document.querySelector(".menu");
+const popupNode = document.querySelector(".popup");
+const seoMoreNode = document.querySelector(".seo__more");
+const questionNode = document.querySelector(".question");
 const containerNode = document.querySelector(".container");
-const juristsList = document.querySelectorAll(".call__jurists-list__item");
-const toggleTextButton = document.querySelector(".seo__more");
-const seoText = document.querySelector(".seo__description");
-const juristsMainNode = document.querySelector(".jurists__main-content");
-const burgerMenu = document.querySelector(".burger-menu");
-const menu = document.querySelector(".menu");
-const menuBackground = document.querySelector(".menu__background");
-const menuClose = document.querySelector(".menu__close");
-const searchMobileButton = document.querySelector(".header-mobile__buttons__search");
-const searchMobile = document.querySelector(".search-mobile");
-const searchCloseButton = document.querySelector(".search__close");
-const popupJuristsList = document.querySelectorAll(".popup__jurists-list__item");
-const popupButton = document.querySelector(".main__actions-button");
-const popup = document.querySelector(".popup");
-const popupSuccess = document.querySelector(".popup__success");
-const popupSuccessButton = document.querySelector(".popup__success-button");
-const popupSuccessClose = document.querySelector(".popup__success-close");
-const questionButton = document.querySelector(".question");
-const popupCloseButton = document.querySelector(".popup__close");
-const actionButtons = document.querySelectorAll(".tutorial__variants__item-action");
-const inputWrappers = document.querySelectorAll(".input-wrapper");
-const popupForm = document.querySelector(".popup form");
-const swiperNavigationNode = document.querySelector(".swiper-navigation");
+const popupFormNode = document.querySelector(".popup form");
+const menuCloseNode = document.querySelector(".menu__close");
+const burgerMenuNode = document.querySelector(".burger-menu");
+const popupCloseNode = document.querySelector(".popup__close");
+const searchCloseNode = document.querySelector(".search__close");
+const searchMobileNode = document.querySelector(".search-mobile");
+const popupSuccessNode = document.querySelector(".popup__success");
+const menuBackgrounNode = document.querySelector(".menu__background");
+const seoDescriptionNode = document.querySelector(".seo__description");
 const swiperButtonPrevNode = document.querySelector(".swiper-button-prev");
 const swiperButtonNextNode = document.querySelector(".swiper-button-next");
+const popupSuccessCloseNode = document.querySelector(".popup__success-close");
+const mainActionsButtonNode = document.querySelector(".main__actions-button");
+const juristsMainContentNode = document.querySelector(".jurists__main-content");
+const popupSuccessButtonNode = document.querySelector(".popup__success-button");
+const callJuristsListItemNode = document.querySelectorAll(".call__jurists-list__item");
+const headerMobileButtonsSearchNode = document.querySelector(".header-mobile__buttons__search");
 
-const forms = document.querySelectorAll("form");
+// Nodes variables
+const formNodes = document.querySelectorAll("form");
+const popupJuristsListItemNodes = document.querySelectorAll(".popup__jurists-list__item");
+const tutorialVariantsItemActionNodes = document.querySelectorAll(".tutorial__variants__item-action");
+
 
 let leftValue = 0,
     textState = 0,
@@ -42,55 +44,55 @@ let leftValue = 0,
 
 
 document.addEventListener("DOMContentLoaded", () => {
-    juristsList.forEach(setLeft);
+    callJuristsListItemNode.forEach(setLeft);
     leftValue = 0;
 
-    popupJuristsList.forEach(setLeft);
+    popupJuristsListItemNodes.forEach(setLeft);
     leftValue = 0;
 
     setContainerWidth();
 
     if (window.innerWidth >= 1440) {
-        juristsMainNode.style.width = Math.ceil(containerWidth * 32.152 / 100) + "px";
+        juristsMainContentNode.style.width = Math.ceil(containerWidth * 32.152 / 100) + "px";
     }
 
-    toggleTextButton.addEventListener("click", () => toggleText(seoText));
+    seoMoreNode.addEventListener("click", () => toggleText(seoDescriptionNode));
 
-    burgerMenu.addEventListener("click", () => {
-        showMenu();
+    burgerMenuNode.addEventListener("click", () => {
+        setActive(menuNode, menuBackgrounNode);
     })
 
-    menuClose.addEventListener("click", () => {
-        hideMenu();
+    menuCloseNode.addEventListener("click", () => {
+        unsetActive(menuNode, menuBackgrounNode);
     })
 
-    popupButton.addEventListener("click", () => {
-        setActive(popup, menuBackground);
+    mainActionsButtonNode.addEventListener("click", () => {
+        setActive(popupNode, menuBackgrounNode);
     });
 
-    questionButton.addEventListener("click", () => {
-        setActive(popup, menuBackground);
+    questionNode.addEventListener("click", () => {
+        setActive(popupNode, menuBackgrounNode);
     });
 
-    actionButtons.forEach((item) => {
+    tutorialVariantsItemActionNodes.forEach((item) => {
         item.addEventListener("click", () => {
-            setActive(popup, menuBackground);
+            setActive(popupNode, menuBackgrounNode);
         });
     })
 
-    popupCloseButton.addEventListener("click", () => {
-        unsetActive(popup, menuBackground);
+    popupCloseNode.addEventListener("click", () => {
+        unsetActive(popupNode, menuBackgrounNode);
     })
 
-    popupSuccessClose.addEventListener("click", () => {
-        unsetActive(popupSuccess, menuBackground);
+    popupSuccessCloseNode.addEventListener("click", () => {
+        unsetActive(popupSuccessNode, menuBackgrounNode);
     });
 
-    popupSuccessButton.addEventListener("click", () => {
-        unsetActive(popupSuccess, menuBackground);
+    popupSuccessButtonNode.addEventListener("click", () => {
+        unsetActive(popupSuccessNode, menuBackgrounNode);
     })
 
-    forms.forEach((form) => {
+    formNodes.forEach((form) => {
         form.addEventListener("submit", (e) => {
             e.preventDefault();
 
@@ -126,8 +128,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
             if (!isFormValid) return;
 
-            setActive(popupSuccess, menuBackground);
-            if (isPopupForm) unsetActive(popup);
+            setActive(popupSuccessNode, menuBackgrounNode);
+            if (isPopupForm) unsetActive(popupNode);
 
             phone.value = "";
             if (isFormContainName) name.value = "";
@@ -143,12 +145,12 @@ document.addEventListener("DOMContentLoaded", () => {
         resize();
     });
 
-    searchMobileButton.addEventListener("click", () => {
-        setActive(searchMobile, menuBackground);
+    headerMobileButtonsSearchNode.addEventListener("click", () => {
+        setActive(searchMobileNode, menuBackgrounNode);
     });
 
-    searchCloseButton.addEventListener("click", () => {
-        unsetActive(searchMobile, menuBackground);
+    searchCloseNode.addEventListener("click", () => {
+        unsetActive(searchMobileNode, menuBackgrounNode);
     });
 });
 
@@ -192,7 +194,7 @@ function setLeft(element) {
 function toggleText(element) {
     textState = +!textState;
     element.style.height = TEXT_STATES[textState];
-    toggleTextButton.innerHTML = BUTTON_STATES[textState];
+    seoMoreNode.innerHTML = BUTTON_STATES[textState];
 }
 
 function getElementWidth(element) {
@@ -214,11 +216,11 @@ function toggleClass(itemClass, ...items) {
 function resize() {
     if (window.innerWidth < 1024 && desctopFormat === true) {
         desctopFormat = false;
-        juristsList.forEach(setLeft);
+        callJuristsListItemNode.forEach(setLeft);
         toggleClass("swiper-button-hidden", swiperButtonNextNode, swiperButtonPrevNode);
     } else if (window.innerWidth >= 1024 && desctopFormat === false) {
         desctopFormat = true;
-        juristsList.forEach(setLeft);
+        callJuristsListItemNode.forEach(setLeft);
         toggleClass("swiper-button-hidden", swiperButtonNextNode, swiperButtonPrevNode);
     }
     leftValue = 0;
