@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="src/styles/colors.css">
     <link rel="stylesheet" href="src/styles/style.css">
     <link rel="stylesheet" href="src/styles/hovers.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
 </head>
 
 <body>
@@ -498,18 +500,12 @@
             </button>
         </section>
         <section class="reviews section">
-            <button class="slider-left slider-button disable">
-                <img src="assets/arrow-left.png" alt="">
-            </button>
-            <button class="slider-right slider-button">
-                <img src="assets/arrow-right.png" alt="">
-            </button>
             <h2 class="reviews__title section__title">
                 Отзывы наших клиентов
             </h2>
-            <div class="reviews__wrap">
-                <ul class="reviews__list">
-                    <li class="reviews__list__item">
+            <div class="swiper">
+                <ul class="reviews__list swiper-wrapper">
+                    <li class="reviews__list__item swiper-slide">
                         <div class="reviews__list__item-header">
                             <div class="reviews__list__item-title">
                                 <div class="reviews__list__item-info">
@@ -534,7 +530,7 @@
 
                         </div>
                     </li>
-                    <li class="reviews__list__item">
+                    <li class="reviews__list__item swiper-slide">
                         <div class="reviews__list__item-header">
                             <div class="reviews__list__item-title">
                                 <div class="reviews__list__item-info">
@@ -559,7 +555,7 @@
 
                         </div>
                     </li>
-                    <li class="reviews__list__item">
+                    <li class="reviews__list__item swiper-slide">
                         <div class="reviews__list__item-header">
                             <div class="reviews__list__item-title">
                                 <div class="reviews__list__item-info">
@@ -584,7 +580,7 @@
 
                         </div>
                     </li>
-                    <li class="reviews__list__item">
+                    <li class="reviews__list__item swiper-slide">
                         <div class="reviews__list__item-header">
                             <div class="reviews__list__item-title">
                                 <div class="reviews__list__item-info">
@@ -609,7 +605,7 @@
 
                         </div>
                     </li>
-                    <li class="reviews__list__item">
+                    <li class="reviews__list__item swiper-slide">
                         <div class="reviews__list__item-header">
                             <div class="reviews__list__item-title">
                                 <div class="reviews__list__item-info">
@@ -634,7 +630,7 @@
 
                         </div>
                     </li>
-                    <li class="reviews__list__item">
+                    <li class="reviews__list__item swiper-slide">
                         <div class="reviews__list__item-header">
                             <div class="reviews__list__item-title">
                                 <div class="reviews__list__item-info">
@@ -659,7 +655,7 @@
 
                         </div>
                     </li>
-                    <li class="reviews__list__item">
+                    <li class="reviews__list__item swiper-slide">
                         <div class="reviews__list__item-header">
                             <div class="reviews__list__item-title">
                                 <div class="reviews__list__item-info">
@@ -684,7 +680,7 @@
 
                         </div>
                     </li>
-                    <li class="reviews__list__item">
+                    <li class="reviews__list__item swiper-slide">
                         <div class="reviews__list__item-header">
                             <div class="reviews__list__item-title">
                                 <div class="reviews__list__item-info">
@@ -709,7 +705,7 @@
 
                         </div>
                     </li>
-                    <li class="reviews__list__item">
+                    <li class="reviews__list__item swiper-slide">
                         <div class="reviews__list__item-header">
                             <div class="reviews__list__item-title">
                                 <div class="reviews__list__item-info">
@@ -737,7 +733,14 @@
                     </li>
                 </ul>
             </div>
+            <div class="swiper-button-prev">
+                <img class="swiper-navigation-icon" src="assets/swiper-button.png" alt="">
+            </div>
+            <div class="swiper-button-next">
+                <img class="swiper-navigation-icon" src="assets/swiper-button.png" alt="">
+            </div>
         </section>
+
         <section class="jurists section">
             <h2 class="jurists__title section__title">Юристы портала</h2>
             <div class="jurists__main">
@@ -1121,6 +1124,7 @@
     <script src="https://unpkg.com/imask"></script>
     <script src="src/scripts/script.js"></script>
     <script src="src/scripts/mask.js"></script>
+    <script src="src/scripts/slider.js"></script>
 </body>
 
 </html>
