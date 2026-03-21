@@ -598,6 +598,11 @@ textarea.error+label {
     font-weight: 400;
 }
 
+.breadcrumbs__item:not(:last-child)::after {
+    content: "/";
+    margin-left: 10px;
+}
+
 .main {
     display: flex;
     flex-direction: row;
@@ -803,7 +808,7 @@ textarea.error+label {
     position: relative;
 }
 
-.call__action-text {
+.call .call__action-title {
     font-weight: 600;
     font-size: 24px;
 }
@@ -973,7 +978,7 @@ textarea.error+label {
     justify-content: space-between;
 }
 
-.order-call__form__title {
+.order-call .order-call__form__title {
     font-weight: 700;
     font-size: 18px;
 }
@@ -1675,7 +1680,7 @@ textarea.error+label {
         padding-right: 24px;
     }
 
-    .call__action-text {
+    .call .call__action-title {
         font-size: 18px;
     }
 

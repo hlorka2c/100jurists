@@ -4,18 +4,18 @@ const BUTTON_STATES = ["Показать весь текст", "Свернуть
 
 // Node variables
 const menuNode = document.querySelector(".menu");
-const popupNode = document.querySelector(".popup");
+export const popupNode = document.querySelector(".popup");
 const seoMoreNode = document.querySelector(".seo__more");
 const questionNode = document.querySelector(".question");
 const containerNode = document.querySelector(".container");
-const popupFormNode = document.querySelector(".popup form");
+// const popupFormNode = document.querySelector(".popup form");
 const menuCloseNode = document.querySelector(".menu__close");
 const burgerMenuNode = document.querySelector(".burger-menu");
 const popupCloseNode = document.querySelector(".popup__close");
 const searchCloseNode = document.querySelector(".search__close");
 const searchMobileNode = document.querySelector(".search-mobile");
-const popupSuccessNode = document.querySelector(".popup__success");
-const menuBackgrounNode = document.querySelector(".menu__background");
+export const popupSuccessNode = document.querySelector(".popup__success");
+export const menuBackgrounNode = document.querySelector(".menu__background");
 const seoDescriptionNode = document.querySelector(".seo__description");
 const swiperButtonPrevNode = document.querySelector(".swiper-button-prev");
 const swiperButtonNextNode = document.querySelector(".swiper-button-next");
@@ -127,18 +127,6 @@ function toggleText(element) {
     seoMoreNode.innerHTML = BUTTON_STATES[textState];
 }
 
-function getElementWidth(element) {
-    return +getComputedStyle(element).width.split("px")[0];
-}
-
-function setActive(...items) {
-    items.forEach(item => item.classList.add("active"));
-}
-
-function unsetActive(...items) {
-    items.forEach(item => item.classList.remove("active"));
-}
-
 function toggleClass(itemClass, ...items) {
     items.forEach(item => item.classList.toggle(itemClass));
 }
@@ -154,4 +142,12 @@ function resize() {
         toggleClass("swiper-button-hidden", swiperButtonNextNode, swiperButtonPrevNode);
     }
     leftValue = 0;
+}
+
+export function setActive(...items) {
+    items.forEach(item => item.classList.add("active"));
+}
+
+export function unsetActive(...items) {
+    items.forEach(item => item.classList.remove("active"));
 }
