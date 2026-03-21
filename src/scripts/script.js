@@ -1,9 +1,8 @@
-const TEXT_STATES = ["140px", "auto"];
 const LEFT__VARIANTS = [31, 16, 24];
+const TEXT_STATES = ["140px", "auto"];
 const BUTTON_STATES = ["Показать весь текст", "Свернуть"];
 
 // Node variables
-
 const menuNode = document.querySelector(".menu");
 const popupNode = document.querySelector(".popup");
 const seoMoreNode = document.querySelector(".seo__more");
@@ -28,7 +27,6 @@ const callJuristsListItemNode = document.querySelectorAll(".call__jurists-list__
 const headerMobileButtonsSearchNode = document.querySelector(".header-mobile__buttons__search");
 
 // Nodes variables
-const formNodes = document.querySelectorAll("form");
 const popupJuristsListItemNodes = document.querySelectorAll(".popup__jurists-list__item");
 const tutorialVariantsItemActionNodes = document.querySelectorAll(".tutorial__variants__item-action");
 
@@ -38,9 +36,8 @@ let leftValue = 0,
     containerWidth = 0,
     desctopFormat = true,
     list,
-    gap,
-    isPhoneLengthCorrect;
-
+    gap;
+    
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -92,51 +89,6 @@ document.addEventListener("DOMContentLoaded", () => {
         unsetActive(popupSuccessNode, menuBackgrounNode);
     })
 
-    formNodes.forEach((form) => {
-        form.addEventListener("submit", (e) => {
-            e.preventDefault();
-
-            let phone = form.querySelector(".input-wrapper--phone input"),
-                name = form.querySelector(".input-wrapper--name input"),
-                textarea = form.querySelector("textarea");
-
-            let isFormContainName = !!name,
-                isFormContainTextArea = !!textarea,
-                isNameNotEmpty = isFormContainName ? !!name.value.trim() : false,
-                isTextareaNotEmpty = isFormContainTextArea ? !!textarea.value.trim() : false,
-                isPopupForm = form.classList.contains("popup__form"),
-                isFormValid;
-
-            isPhoneLengthCorrect = phone.value.length === 16;
-
-            if (isFormContainTextArea) {
-                isFormValid = isPhoneLengthCorrect && isNameNotEmpty && isTextareaNotEmpty;
-
-                validateFormName(name);
-                validateFormPhone(phone);
-                validateFormTextarea(textarea);
-            } else if (isFormContainName) {
-                isFormValid = isPhoneLengthCorrect && isNameNotEmpty;
-
-                validateFormName(name);
-                validateFormPhone(phone);
-            } else {
-                isFormValid = isPhoneLengthCorrect;
-
-                validateFormPhone();
-            }
-
-            if (!isFormValid) return;
-
-            setActive(popupSuccessNode, menuBackgrounNode);
-            if (isPopupForm) unsetActive(popupNode);
-
-            phone.value = "";
-            if (isFormContainName) name.value = "";
-            if (isFormContainTextArea) textarea.value = "";
-        })
-    })
-
     if (window.innerWidth <= 800) {
         toggleClass("swiper-button-hidden", swiperButtonNextNode, swiperButtonPrevNode);
     }
@@ -153,28 +105,6 @@ document.addEventListener("DOMContentLoaded", () => {
         unsetActive(searchMobileNode, menuBackgrounNode);
     });
 });
-
-function validateFormName(name) {
-    if (!name.value.trim()) {
-        name.classList.add("error");
-        setTimeout(() => { name.classList.remove("error") }, 1000);
-    }
-}
-
-function validateFormPhone(phone) {
-    if (!isPhoneLengthCorrect) {
-        phone.classList.add("error");
-        setTimeout(() => { phone.classList.remove("error") }, 1000);
-    }
-}
-
-function validateFormTextarea(textarea) {
-    if (!textarea.value.trim()) {
-        textarea.classList.add("error");
-        setTimeout(() => { textarea.classList.remove("error") }, 1000);
-
-    }
-}
 
 function addPX(value) {
     return value + "px";

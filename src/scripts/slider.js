@@ -1,6 +1,13 @@
+import Swiper from "swiper";
+import "swiper/css"
+import 'swiper/css/navigation';
+import { Navigation } from "swiper/modules";
+
+
 const swiper = new Swiper('.swiper', {
     // Optional parameters
     direction: 'horizontal',
+    modules: [Navigation],
     loop: false,
     speed: 300,
 
@@ -9,7 +16,6 @@ const swiper = new Swiper('.swiper', {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
         addIcons: false,
-        enabled: false,
     },
 
     slidesPerView: 1.09,

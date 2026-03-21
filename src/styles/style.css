@@ -1508,6 +1508,10 @@ textarea.error+label {
     opacity: 50%;
 }
 
+.swiper-button {
+    position: absolute;
+}
+
 @media screen and (max-width: 1440px) {
     .variants__list {
         grid-auto-rows: max-content;

@@ -12,8 +12,6 @@
     <link rel="stylesheet" href="src/styles/colors.css">
     <link rel="stylesheet" href="src/styles/style.css">
     <link rel="stylesheet" href="src/styles/hovers.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
-    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
 </head>
 
 <body>
@@ -327,7 +325,7 @@
             <form action="" class="order-call__form section__form">
                 <div class="order-call__form__title">Заказать обратный звонок</div>
                 <div class="order-call__form__main">
-                    <div class="input-wrapper input-wrapper--phone field">
+                    <div class="input-wrapper input-wrapper--orderCall input-wrapper--phone field">
                         <input required type="text" id="phoneOrderCall" class="input-wrapper__input">
                         <label for="phoneOrderCall" class="input-wrapper__label">Номер телефона</label>
                     </div>
@@ -460,7 +458,7 @@
             </h2>
             <form action="" class="order-call__form section__form">
                 <div class="order-call__form__main">
-                    <div class="input-wrapper input-wrapper--phone field">
+                    <div class="input-wrapper input-wrapper--sendQuestion input-wrapper--phone field">
                         <input required type="text" id="phoneSendQuestion" class="input-wrapper__input">
                         <label for="phoneSendQuestion" class="input-wrapper__label">Номер телефона</label>
                     </div>
@@ -733,10 +731,10 @@
                     </li>
                 </ul>
             </div>
-            <div class="swiper-button-prev">
+            <div class="swiper-button-prev swiper-button">
                 <img class="swiper-navigation-icon" src="assets/swiper-button.png" alt="">
             </div>
-            <div class="swiper-button-next">
+            <div class="swiper-button-next swiper-button">
                 <img class="swiper-navigation-icon" src="assets/swiper-button.png" alt="">
             </div>
         </section>
@@ -816,7 +814,7 @@
                                 <label for="juristsPhone" class="input-wrapper__label">Опишите вашу проблему</label>
                             </div>
                             <div class="form-row">
-                                <div class="input-wrapper input-wrapper--phone field">
+                                <div class="input-wrapper input-wrapper--jurists input-wrapper--phone field">
                                     <input required type="text" id="juristsPhone" class="input-wrapper__input">
                                     <label for="juristsPhone" class="input-wrapper__label">Номер телефона</label>
                                 </div>
@@ -1068,7 +1066,7 @@
         </h3>
         <img src="assets/close.png" alt="" class="popup__close">
         <form class="popup__form form-row">
-            <div class="input-wrapper field input-wrapper--phone">
+            <div class="input-wrapper input-wrapper--phone">
                 <input required type="text" id="popupPhone" class="input-wrapper__input">
                 <label for="popupPhone" class="input-wrapper__label">Номер телефона</label>
             </div>
@@ -1121,10 +1119,9 @@
         <p class="popup__success-desc">Мы свяжемся с вами в течении х минут</p>
         <button class="popup__success-button">Закрыть окно</button>
     </div>
-    <script src="https://unpkg.com/imask"></script>
-    <script src="src/scripts/script.js"></script>
-    <script src="src/scripts/mask.js"></script>
-    <script src="src/scripts/slider.js"></script>
+    <script type="module" src="src/scripts/mask.js"></script>
+    <script type="module" src="src/scripts/script.js"></script>
+    <script type="module" src="src/scripts/slider.js"></script>
 </body>
 
 </html>

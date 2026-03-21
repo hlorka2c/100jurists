@@ -1,0 +1,25 @@
+{
+  "name": "learn",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hlorka2c/100jurists.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hlorka2c/100jurists/issues"
+  },
+  "homepage": "https://github.com/hlorka2c/100jurists#readme",
+  "description": "",
+  "dependencies": {
+    "imask": "^7.6.1",
+    "swiper": "^12.1.2",
+    "vite": "^7.3.1"
+  }
+}
