@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "vite"
   },
   "repository": {
     "type": "git",
@@ -19,6 +20,7 @@
   "description": "",
   "dependencies": {
     "imask": "^7.6.1",
+    "sass": "^1.98.0",
     "swiper": "^12.1.2",
     "vite": "^7.3.1"
   }

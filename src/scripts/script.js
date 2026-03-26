@@ -37,7 +37,7 @@ let leftValue = 0,
     desctopFormat = true,
     list,
     gap;
-    
+
 
 
 document.addEventListener("DOMContentLoaded", () => {
