@@ -1,3 +1,5 @@
+@use "partials/colors" as color
+    
 *
     font-family: "Open Sans", sans-serif
     font-size: 16px
@@ -6,7 +8,7 @@
     box-sizing: border-box
 
 body
-    color: var(--black)
+    color: color.$black
 
 textarea:focus,
 textarea
@@ -24,7 +26,7 @@ input:focus
     outline: none
 
 input::placeholder
-    color: var(--black)
+    color: color.$black
 
 a
     color: currentColor
@@ -124,7 +126,7 @@ textarea.error+label
                     display: block
 
         &-text
-            color: var(--black)
+            color: color.$black
             font-size: 12px
             font-weight: 400
             width: 100%
@@ -150,14 +152,14 @@ textarea.error+label
     .input
         &-wrapper
             height: 50px
-            border: 1px solid var(--light-grey-plus)
+            border: 1px solid color.$light-grey-plus
 
             &__input
                 border: none
                 height: 50px
 
             &__button
-                background-color: var(--black)
+                background-color: color.$black
                 height: 53px
 
     *
@@ -210,20 +212,20 @@ textarea.error+label
             margin-top: 30px
             text-align: center
             font-size: 22px
-            color: var(--black)
+            color: color.$black
             letter-spacing: -0.97px
             font-weight: 700
 
         &-desc
             margin-top: 10px
-            color: var(--black)
+            color: color.$black
             font-size: 14px
             text-align: center
             line-height: 160%
 
         &-button
             padding: 15px 24px 16px
-            background-color: var(--green)
+            background-color: color.$green
             color: white
             font-size: 14px
             font-weight: 600
@@ -260,7 +262,7 @@ textarea.error+label
         resize: none
         display: flex
         flex-direction: row
-        color: var(--black)
+        color: color.$black
         max-width: unset !important
 
         textarea
@@ -280,7 +282,7 @@ textarea.error+label
         padding: 0
         margin-bottom: 3px
         z-index: 1
-        color: var(--black)
+        color: color.$black
 
     &__input
         width: 100%
@@ -288,7 +290,7 @@ textarea.error+label
         box-sizing: border-box
         font-size: 16px
         border: 1px solid #ccc
-        color: var(--black)
+        color: color.$black
         border-radius: 10px
         height: 100%
         opacity: 100
@@ -311,7 +313,7 @@ textarea.error+label
             top: 7px
             transform: translateY(0)
             font-size: 12px
-            color: var(--light-grey)
+            color: color.$light-grey
 
         textarea
             height: 169px
@@ -338,7 +340,7 @@ textarea.error+label
         display: none
         justify-content: space-between
         align-items: center
-        border-bottom: 1px solid var(--light-grey-plus)
+        border-bottom: 1px solid color.$light-grey-plus
         position: fixed
         width: 100%
         top: 0
@@ -367,10 +369,10 @@ textarea.error+label
 
     &__line
         display: block
-        background-color: var(--green)
+        background-color: color.$green
         border-radius: 1px
         width: 100%
-        border: 1px solid var(--green)
+        border: 1px solid color.$green
 
 .search
     flex-grow: 1
@@ -429,7 +431,7 @@ textarea.error+label
     border: none
     padding: 0
     border-radius: 10px
-    background: var(--green)
+    background: color.$green
     color: white
     padding: 10px
     border-radius: 10px
@@ -451,12 +453,12 @@ textarea.error+label
     &__number
         font-weight: 700
         font-size: 20px
-        color: var(--black)
+        color: color.$black
 
     &__text
         font-weight: 400
         font-size: 14px
-        color: var(--grey)
+        color: color.$grey
 
 .nav
     padding-top: 30px
@@ -485,14 +487,14 @@ textarea.error+label
 
     &__button
         padding: 10px 20px
-        border: 1px solid var(--light-grey-plus)
+        border: 1px solid color.$light-grey-plus
         border-radius: 10px
         display: flex
         flex-direction: row
         justify-content: space-between
         align-items: center
         gap: 10px
-        color: var(--black)
+        color: color.$black
         font-weight: 400
         text-wrap: nowrap
         transition: all 0.3s
@@ -552,7 +554,7 @@ textarea.error+label
 
         &-button
             border-radius: 10px
-            background: var(--green)
+            background: color.$green
             padding: 16px 36px 18px
             color: white
             font-weight: 600
@@ -565,7 +567,7 @@ textarea.error+label
 
             &__number
                 font-weight: 700
-                color: var(--green)
+                color: color.$green
                 font-size: 24px
                 text-wrap: nowrap
                 transition: all 0.3s
@@ -574,11 +576,11 @@ textarea.error+label
                     content: ""
                     width: calc(100% - 2px)
                     height: 2px
-                    background: var(--green)
+                    background: color.$green
                     display: block
 
             &__text
-                color: var(--grey)
+                color: color.$grey
                 font-size: 12px
                 margin-top: 5px
 
@@ -626,7 +628,7 @@ textarea.error+label
         margin-top: 30px
 
         &__item
-            border: 1px solid var(--light-grey-plus)
+            border: 1px solid color.$light-grey-plus
             border-radius: 20px
             padding: 20px
             max-height: 180px
@@ -651,7 +653,7 @@ textarea.error+label
 
             &-action
                 letter-spacing: 0px
-                color: var(--green)
+                color: color.$green
                 font-weight: 600
 
             &-icon
@@ -659,7 +661,7 @@ textarea.error+label
                 height: 24px
 
 .call
-    background-color: var(--green)
+    background-color: color.$green
     border-radius: 20px
     display: flex
     flex-direction: row
@@ -740,7 +742,7 @@ textarea.error+label
             &__more
                 border-radius: 100px
                 background-color: white
-                color: var(--grey)
+                color: color.$grey
                 font-weight: 600
                 display: flex
                 justify-content: center
@@ -771,7 +773,7 @@ textarea.error+label
             display: flex
             flex-direction: row
             align-items: center
-            border: 1px solid var(--light-grey-plus)
+            border: 1px solid color.$light-grey-plus
             border-radius: 20px
 
             &-text
@@ -813,13 +815,13 @@ textarea.error+label
             align-items: flex-start
 
             &-number
-                color: var(--green)
+                color: color.$green
                 font-weight: 700
                 letter-spacing: -0.97px
                 font-size: 28px
 
 .order-call
-    background: var(--green)
+    background: color.$green
     padding: 31px 57px 34px 60px
     display: flex
     flex-direction: row
@@ -876,7 +878,7 @@ textarea.error+label
         gap: 20px
 
         &__item
-            border: 1px solid var(--light-grey-plus)
+            border: 1px solid color.$light-grey-plus
             border-radius: 20px
             padding: 20px
             display: flex
@@ -901,7 +903,7 @@ textarea.error+label
                         content: ""
                         width: 100%
                         height: 0
-                        border: 1px solid var(--green)
+                        border: 1px solid color.$green
                         bottom: 0
                         left: 0
             &-description
@@ -933,11 +935,11 @@ textarea.error+label
         width: 100%
 
         &__button
-            background: var(--green)
+            background: color.$green
             border: none
 
     & .order-call__form__text
-        color: var(--light-grey)
+        color: color.$light-grey
         margin-top: 18px
         text-wrap: auto
 
@@ -965,7 +967,7 @@ textarea.error+label
         border-radius: 10px
         text-align: center
         font-weight: 600
-        color: var(--green)
+        color: color.$green
 
 .reviews
     margin-top: 80px
@@ -995,9 +997,9 @@ textarea.error+label
         margin-top: 30px
 
         &__item
-            -webkit-box-shadow: 0px 0px 1px 1px var(--light-grey-plus) inset
-            -moz-box-shadow: 0px 0px 1px 1px var(--light-grey-plus) inset
-            box-shadow: 0px 0px 1px 1px var(--light-grey-plus) inset
+            -webkit-box-shadow: 0px 0px 1px 1px color.$light-grey-plus inset
+            -moz-box-shadow: 0px 0px 1px 1px color.$light-grey-plus inset
+            box-shadow: 0px 0px 1px 1px color.$light-grey-plus inset
 
             border-radius: 20px
             padding: 30px
@@ -1035,7 +1037,7 @@ textarea.error+label
                 height: 25px
 
             &-date
-                color: var(--grey)
+                color: color.$grey
                 font-size: 16px
                 line-height: 22px
                 height: 22px
@@ -1055,12 +1057,12 @@ textarea.error+label
 
                 &-label
                     font-size: 14px
-                    color: var(--grey)
+                    color: color.$grey
 
                 &-main
                     font-weight: 600
                     line-height: 150%
-                    color: var(--green)
+                    color: color.$green
 
     &__wrap
         min-width: calc(100% + 1px)
@@ -1095,7 +1097,7 @@ textarea.error+label
         gap: 15px
 
         &__item
-            border: 1px solid var(--light-grey-plus)
+            border: 1px solid color.$light-grey-plus
             border-radius: 20px
             height: 124px
 
@@ -1126,7 +1128,7 @@ textarea.error+label
                 text-wrap: nowrap
 
             &-more
-                color: var(--grey)
+                color: color.$grey
 
     &__link
         display: block
@@ -1134,7 +1136,7 @@ textarea.error+label
         width: 100%
         padding: 18px 0 18px
         background: #E0ECE9
-        color: var(--green)
+        color: color.$green
         font-weight: 600
         text-align: center
         border-radius: 10px
@@ -1143,7 +1145,7 @@ textarea.error+label
     &__request
         width: 100%
         height: 100%
-        background-color: var(--green)
+        background-color: color.$green
         border-radius: 20px
         padding: 40px 40px 59px 40px
         display: flex
@@ -1175,10 +1177,10 @@ textarea.error+label
                 resize: none
                 display: flex
                 flex-direction: row
-                color: var(--black)
+                color: color.$black
 
                 &::placeholder
-                    color: var(--grey)
+                    color: color.$grey
                     font-size: 16px
                     text-align: start
 
@@ -1189,7 +1191,7 @@ textarea.error+label
             &_button
                 border: none
                 color: white
-                background-color: var(--black)
+                background-color: color.$black
                 padding: 16px 24px 18px
 
     &__main-form
@@ -1250,7 +1252,7 @@ textarea.error+label
         &-title
             font-weight: 700
             font-size: 24px
-            color: var(--black)
+            color: color.$black
 
         &-list
             margin-top: 15px
@@ -1467,7 +1469,7 @@ textarea.error+label
 
     .nav__login
         padding: 10px 20px
-        border: 1px solid var(--light-grey-plus)
+        border: 1px solid color.$light-grey-plus
         border-radius: 10px
 
     .login__link

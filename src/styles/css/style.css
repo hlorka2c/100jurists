@@ -7,7 +7,7 @@
 }
 
 body {
-  color: var(--black);
+  color: #140A32;
 }
 
 textarea:focus,
@@ -30,7 +30,7 @@ input:focus {
 }
 
 input::placeholder {
-  color: var(--black);
+  color: #140A32;
 }
 
 a {
@@ -136,7 +136,7 @@ textarea.error + label {
   display: block;
 }
 .popup__jurists-text {
-  color: var(--black);
+  color: #140A32;
   font-size: 12px;
   font-weight: 400;
   width: 100%;
@@ -160,14 +160,14 @@ textarea.error + label {
 }
 .popup .input-wrapper {
   height: 50px;
-  border: 1px solid var(--light-grey-plus);
+  border: 1px solid rgba(47, 43, 67, 0.1490196078);
 }
 .popup .input-wrapper__input {
   border: none;
   height: 50px;
 }
 .popup .input-wrapper__button {
-  background-color: var(--black);
+  background-color: #140A32;
   height: 53px;
 }
 .popup * {
@@ -219,20 +219,20 @@ textarea.error + label {
   margin-top: 30px;
   text-align: center;
   font-size: 22px;
-  color: var(--black);
+  color: #140A32;
   letter-spacing: -0.97px;
   font-weight: 700;
 }
 .popup__success-desc {
   margin-top: 10px;
-  color: var(--black);
+  color: #140A32;
   font-size: 14px;
   text-align: center;
   line-height: 160%;
 }
 .popup__success-button {
   padding: 15px 24px 16px;
-  background-color: var(--green);
+  background-color: #33836E;
   color: white;
   font-size: 14px;
   font-weight: 600;
@@ -272,7 +272,7 @@ textarea.error + label {
   resize: none;
   display: flex;
   flex-direction: row;
-  color: var(--black);
+  color: #140A32;
   max-width: unset !important;
 }
 .input-wrapper--textarea textarea {
@@ -292,7 +292,7 @@ textarea.error + label {
   padding: 0;
   margin-bottom: 3px;
   z-index: 1;
-  color: var(--black);
+  color: #140A32;
 }
 .input-wrapper__input {
   width: 100%;
@@ -300,7 +300,7 @@ textarea.error + label {
   box-sizing: border-box;
   font-size: 16px;
   border: 1px solid #ccc;
-  color: var(--black);
+  color: #140A32;
   border-radius: 10px;
   height: 100%;
   opacity: 100;
@@ -322,7 +322,7 @@ textarea.error + label {
   top: 7px;
   transform: translateY(0);
   font-size: 12px;
-  color: var(--light-grey);
+  color: rgba(47, 43, 67, 0.4);
 }
 .field:focus-within textarea {
   height: 169px;
@@ -350,7 +350,7 @@ textarea.error + label {
   display: none;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid var(--light-grey-plus);
+  border-bottom: 1px solid rgba(47, 43, 67, 0.1490196078);
   position: fixed;
   width: 100%;
   top: 0;
@@ -380,10 +380,10 @@ textarea.error + label {
 }
 .burger-menu__line {
   display: block;
-  background-color: var(--green);
+  background-color: #33836E;
   border-radius: 1px;
   width: 100%;
-  border: 1px solid var(--green);
+  border: 1px solid #33836E;
 }
 
 .search {
@@ -444,7 +444,7 @@ textarea.error + label {
   border: none;
   padding: 0;
   border-radius: 10px;
-  background: var(--green);
+  background: #33836E;
   color: white;
   padding: 10px;
   border-radius: 10px;
@@ -466,12 +466,12 @@ textarea.error + label {
 .phone__number {
   font-weight: 700;
   font-size: 20px;
-  color: var(--black);
+  color: #140A32;
 }
 .phone__text {
   font-weight: 400;
   font-size: 14px;
-  color: var(--grey);
+  color: rgba(47, 43, 67, 0.5019607843);
 }
 
 .nav {
@@ -501,14 +501,14 @@ textarea.error + label {
 }
 .nav__button {
   padding: 10px 20px;
-  border: 1px solid var(--light-grey-plus);
+  border: 1px solid rgba(47, 43, 67, 0.1490196078);
   border-radius: 10px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   gap: 10px;
-  color: var(--black);
+  color: #140A32;
   font-weight: 400;
   text-wrap: nowrap;
   transition: all 0.3s;
@@ -571,7 +571,7 @@ textarea.error + label {
 }
 .main__actions-button {
   border-radius: 10px;
-  background: var(--green);
+  background: #33836E;
   padding: 16px 36px 18px;
   color: white;
   font-weight: 600;
@@ -584,7 +584,7 @@ textarea.error + label {
 }
 .main__actions-phone__number {
   font-weight: 700;
-  color: var(--green);
+  color: #33836E;
   font-size: 24px;
   text-wrap: nowrap;
   transition: all 0.3s;
@@ -593,11 +593,11 @@ textarea.error + label {
   content: "";
   width: calc(100% - 2px);
   height: 2px;
-  background: var(--green);
+  background: #33836E;
   display: block;
 }
 .main__actions-phone__text {
-  color: var(--grey);
+  color: rgba(47, 43, 67, 0.5019607843);
   font-size: 12px;
   margin-top: 5px;
 }
@@ -647,7 +647,7 @@ textarea.error + label {
   margin-top: 30px;
 }
 .tutorial__variants__item {
-  border: 1px solid var(--light-grey-plus);
+  border: 1px solid rgba(47, 43, 67, 0.1490196078);
   border-radius: 20px;
   padding: 20px;
   max-height: 180px;
@@ -672,7 +672,7 @@ textarea.error + label {
 }
 .tutorial__variants__item-action {
   letter-spacing: 0px;
-  color: var(--green);
+  color: #33836E;
   font-weight: 600;
 }
 .tutorial__variants__item-icon {
@@ -681,7 +681,7 @@ textarea.error + label {
 }
 
 .call {
-  background-color: var(--green);
+  background-color: #33836E;
   border-radius: 20px;
   display: flex;
   flex-direction: row;
@@ -762,7 +762,7 @@ textarea.error + label {
 .call__jurists-list__more {
   border-radius: 100px;
   background-color: white;
-  color: var(--grey);
+  color: rgba(47, 43, 67, 0.5019607843);
   font-weight: 600;
   display: flex;
   justify-content: center;
@@ -794,7 +794,7 @@ textarea.error + label {
   display: flex;
   flex-direction: row;
   align-items: center;
-  border: 1px solid var(--light-grey-plus);
+  border: 1px solid rgba(47, 43, 67, 0.1490196078);
   border-radius: 20px;
 }
 .variants__list__item-text {
@@ -837,14 +837,14 @@ textarea.error + label {
   align-items: flex-start;
 }
 .about__advantages__item-number {
-  color: var(--green);
+  color: #33836E;
   font-weight: 700;
   letter-spacing: -0.97px;
   font-size: 28px;
 }
 
 .order-call {
-  background: var(--green);
+  background: #33836E;
   padding: 31px 57px 34px 60px;
   display: flex;
   flex-direction: row;
@@ -903,7 +903,7 @@ textarea.error + label {
   gap: 20px;
 }
 .specialties__list__item {
-  border: 1px solid var(--light-grey-plus);
+  border: 1px solid rgba(47, 43, 67, 0.1490196078);
   border-radius: 20px;
   padding: 20px;
   display: flex;
@@ -928,7 +928,7 @@ textarea.error + label {
   content: "";
   width: 100%;
   height: 0;
-  border: 1px solid var(--green);
+  border: 1px solid #33836E;
   bottom: 0;
   left: 0;
 }
@@ -962,11 +962,11 @@ textarea.error + label {
   width: 100%;
 }
 .send-question .input-wrapper__button {
-  background: var(--green);
+  background: #33836E;
   border: none;
 }
 .send-question .order-call__form__text {
-  color: var(--light-grey);
+  color: rgba(47, 43, 67, 0.4);
   margin-top: 18px;
   text-wrap: auto;
 }
@@ -995,7 +995,7 @@ textarea.error + label {
   border-radius: 10px;
   text-align: center;
   font-weight: 600;
-  color: var(--green);
+  color: #33836E;
 }
 
 .reviews {
@@ -1026,9 +1026,9 @@ textarea.error + label {
   margin-top: 30px;
 }
 .reviews__list__item {
-  -webkit-box-shadow: 0px 0px 1px 1px var(--light-grey-plus) inset;
-  -moz-box-shadow: 0px 0px 1px 1px var(--light-grey-plus) inset;
-  box-shadow: 0px 0px 1px 1px var(--light-grey-plus) inset;
+  -webkit-box-shadow: 0px 0px 1px 1px rgba(47, 43, 67, 0.1490196078) inset;
+  -moz-box-shadow: 0px 0px 1px 1px rgba(47, 43, 67, 0.1490196078) inset;
+  box-shadow: 0px 0px 1px 1px rgba(47, 43, 67, 0.1490196078) inset;
   border-radius: 20px;
   padding: 30px;
   display: flex !important;
@@ -1065,7 +1065,7 @@ textarea.error + label {
   height: 25px;
 }
 .reviews__list__item-date {
-  color: var(--grey);
+  color: rgba(47, 43, 67, 0.5019607843);
   font-size: 16px;
   line-height: 22px;
   height: 22px;
@@ -1085,12 +1085,12 @@ textarea.error + label {
 }
 .reviews__list__item-question-label {
   font-size: 14px;
-  color: var(--grey);
+  color: rgba(47, 43, 67, 0.5019607843);
 }
 .reviews__list__item-question-main {
   font-weight: 600;
   line-height: 150%;
-  color: var(--green);
+  color: #33836E;
 }
 .reviews__wrap {
   min-width: calc(100% + 1px);
@@ -1126,7 +1126,7 @@ textarea.error + label {
   gap: 15px;
 }
 .jurists__list__item {
-  border: 1px solid var(--light-grey-plus);
+  border: 1px solid rgba(47, 43, 67, 0.1490196078);
   border-radius: 20px;
   height: 124px;
 }
@@ -1157,7 +1157,7 @@ textarea.error + label {
   text-wrap: nowrap;
 }
 .jurists__list__item-more {
-  color: var(--grey);
+  color: rgba(47, 43, 67, 0.5019607843);
 }
 .jurists__link {
   display: block;
@@ -1165,7 +1165,7 @@ textarea.error + label {
   width: 100%;
   padding: 18px 0 18px;
   background: #E0ECE9;
-  color: var(--green);
+  color: #33836E;
   font-weight: 600;
   text-align: center;
   border-radius: 10px;
@@ -1174,7 +1174,7 @@ textarea.error + label {
 .jurists__request {
   width: 100%;
   height: 100%;
-  background-color: var(--green);
+  background-color: #33836E;
   border-radius: 20px;
   padding: 40px 40px 59px 40px;
   display: flex;
@@ -1205,10 +1205,10 @@ textarea.error + label {
   resize: none;
   display: flex;
   flex-direction: row;
-  color: var(--black);
+  color: #140A32;
 }
 .jurists__request__form-main::placeholder {
-  color: var(--grey);
+  color: rgba(47, 43, 67, 0.5019607843);
   font-size: 16px;
   text-align: start;
 }
@@ -1219,7 +1219,7 @@ textarea.error + label {
 .jurists__request .input-wrapper_button {
   border: none;
   color: white;
-  background-color: var(--black);
+  background-color: #140A32;
   padding: 16px 24px 18px;
 }
 .jurists__main-form {
@@ -1280,7 +1280,7 @@ textarea.error + label {
 .guide__section-title {
   font-weight: 700;
   font-size: 24px;
-  color: var(--black);
+  color: #140A32;
 }
 .guide__section-list {
   margin-top: 15px;
@@ -1494,7 +1494,7 @@ textarea.error + label {
   }
   .nav__login {
     padding: 10px 20px;
-    border: 1px solid var(--light-grey-plus);
+    border: 1px solid rgba(47, 43, 67, 0.1490196078);
     border-radius: 10px;
   }
   .login__link {
