@@ -1,0 +1,529 @@
+@use "colors" as color
+    
+@media screen and (max-width: 1440px)
+    .jurists__main-content .jurists__list
+        display: grid
+        grid-template-columns: repeat(2, 1fr)
+        width: 100% !important
+
+    .nav
+        gap: 25px
+
+    .about
+        flex-direction: column
+        justify-content: center
+        align-items: center
+
+        &__advantages
+            justify-content: space-between
+
+    .container
+        max-width: unset
+        width: 100%
+
+    .main
+        width: 100%
+
+        &__advantages
+            grid-template-rows: unset
+            grid-template-columns: unset
+            grid-row-gap: 15px
+            grid-template-areas: "second first" "third fourth"
+
+            &-item:nth-child(0)
+                grid-area: first
+
+            &-item:nth-child(1)
+                grid-area: second
+
+            &-item:nth-child(2)
+                grid-area: third
+
+            &-item:nth-child(3)
+                grid-area: fourth
+
+        &__image-wrapper
+            width: auto
+            display: flex
+
+        &__image
+            width: 100%
+
+        &__actions
+            &-phone
+                &__number
+                    text-align: center
+
+                &__text
+                    text-align: center
+
+        &__description
+            text-wrap: unset
+
+            & br
+                display: none
+
+        &__title
+            font-size: 32px
+
+    .nav__button-text
+        display: none
+
+    .variants__list
+        grid-auto-rows: max-content
+
+        &__item-image
+            width: 55px
+
+    .tutorial__variants
+        display: grid
+        grid-template-columns: repeat(2, 1fr)
+        grid-template-rows: repeat(2, 1fr)
+
+        &__item
+            max-width: unset
+
+    .section h2
+        font-size: 24px
+
+    .send-question
+        flex-direction: column
+        padding: 51px 51px 0
+
+        &__title
+            width: 100%
+            margin-right: 0
+
+            br
+                display: none
+
+    .send-question .input-wrapper,
+    .send-question .input-wrapper__button
+        max-width: none
+        width: 100%
+
+    .order-call__form__text
+        width: 100%
+
+        & br
+            display: none
+
+    .jurists
+        &__main
+            flex-direction: column
+
+            &-group
+                &.jurists__main
+                    &-form
+                        max-width: none
+
+                    &-content
+                        width: 100%
+
+        &__request
+            .form-row
+                gap: 20px
+
+            .input-wrapper
+                max-width: none
+                width: 100%
+
+    .call
+        padding-right: 24px
+
+        &__action
+            &-title
+                font-size: 18px
+
+            &-number
+                font-size: 36px
+
+@media screen and (max-width: 1280px)
+    .question__text
+        display: none
+
+    .jurists__main-content .jurists__list
+        grid-template-columns: repeat(1, 1fr)
+
+    .order-call
+        flex-direction: column
+
+        &__phone
+            flex-direction: row
+            align-items: center
+            justify-content: space-between
+
+        &__form
+            width: 100%
+
+    .nav__login
+        padding: 10px 20px
+        border: 1px solid color.$light-grey-plus
+        border-radius: 10px
+
+    .login__link
+        display: none
+
+    .call__inner
+        gap: 32px
+        justify-content: space-between
+
+@media screen and (max-width: 1024px)
+    .order-call__phone
+        flex-direction: column
+        align-items: start
+
+    .variants__list
+        grid-template-columns: repeat(1, 1fr)
+
+        &__item
+            flex-direction: column
+            align-items: start
+            gap: 15px
+
+            &-text
+                padding: 0
+
+    .header
+        display: none
+
+        &-mobile
+            display: flex
+
+    .nav
+        display: none
+
+    .menu
+        display: block
+
+        &__close
+            position: absolute
+            right: 24px
+
+        .nav
+            display: flex
+
+        .login__link
+            display: block
+
+        .nav
+            &__buttons
+                flex-direction: column
+
+            &__button
+                justify-content: center
+
+            &__login
+                justify-content: center
+
+    .container
+        padding: 0 75px
+
+    .breadcrumbs
+        padding-top: 100px
+
+    .main
+        margin-top: 20px
+        flex-direction: column-reverse
+        justify-content: center
+        align-items: center
+        gap: 20px
+
+        &__block
+            display: flex
+            flex-direction: column
+            align-items: center
+
+        &__image
+            max-width: 235px
+
+        &__title
+            padding: 0
+            text-align: center
+
+        &__description
+            text-align: center
+
+        &__actions
+            justify-content: center
+
+    .call
+        justify-content: unset
+        width: 100%
+        flex-direction: column
+        max-height: unset
+        padding: 30px 27px 30px
+        padding-bottom: 76px
+
+        &__images
+            position: absolute
+            left: 0
+            bottom: 0
+
+        &__woman
+            display: none
+
+        &__circle
+            display: none
+
+        &__jurists-list
+            max-width: 200px
+            left: 16px
+            position: relative
+
+            &__item
+                width: 40px
+                height: 40px
+                min-width: 40px
+                min-height: 40px
+
+            &__more
+                min-width: 40px
+                min-height: 40px
+
+        &__circle-mobile
+            position: absolute
+            bottom: 0
+            left: 0
+            min-height: 150px
+            display: block
+
+        &__inner
+            flex-direction: column
+            align-items: unset
+            width: 100%
+            gap: 37px
+
+        &__action
+            right: unset
+
+        &__jurists
+            right: unset
+            align-items: flex-end
+
+@media screen and (max-width: 800px)
+    .container
+        padding: 0 15px
+
+    .tutorial__variants
+        gap: 10px
+        margin-top: 20px
+
+        &__item
+            max-height: 191px
+
+            &-text
+                font-size: 14px
+
+            &-phone
+                font-size: 18px
+                text-wrap: nowrap
+
+            &-action
+                font-size: 14px
+    .guide
+        margin-bottom: 157px
+
+        &__list
+            grid-template-columns: repeat(2, 1fr)
+
+    .breadcrumbs__item
+        font-size: 12px
+
+        &-link
+            font-size: 12px
+
+    .main
+        &__actions
+            flex-direction: column
+            width: 100%
+            align-items: center
+            margin-top: 29px
+            gap: 20px
+
+            &-phone
+                width: min-content
+
+                &__text
+                    text-wrap: nowrap
+
+            &-button
+                width: 100%
+                font-size: 14px
+
+        &__title
+            font-size: 22px
+
+        &__description
+            font-size: 14px
+
+        &__advantages-item__text
+            font-size: 14px
+
+    .section .section__title
+        font-size: 20px
+
+    .section p,
+    .section p span
+        font-size: 14px
+
+    .call__jurists-text
+        font-size: 14px
+
+    .about__advantages__item
+        &-number
+            font-size: 20px
+
+        &-text
+            font-size: 12px
+
+    .order-call
+        padding: 20px
+
+        &__form
+            &__title
+                font-size: 16px
+                margin-top: 15px
+
+            &__main
+                flex-direction: column
+
+        &__phone
+            padding-top: 0
+            gap: 5px
+
+            &-text
+                font-size: 18px
+
+            &-number
+                font-size: 36px
+
+    .specialties__list
+        display: flex
+        overflow-x: scroll
+        flex-direction: row
+        gap: 10px
+        margin-right: -15px
+
+        &__item
+            min-width: 320px
+
+            &-title__text
+                font-size: 14px
+
+    .send-question__title
+        font-size: 24px
+        text-wrap: auto
+
+    .input-wrapper__button
+        font-size: 14px
+
+    .send-question
+        padding: 20px 20px 0 20px
+
+    .seo__more
+        font-size: 14px
+        padding: 15px 0 16px 0
+
+    .reviews__list__item
+        min-width: 320px
+
+        &-username
+            font-size: 16px
+
+        &-date
+            font-size: 12px
+
+        &-question
+            &-label
+                font-size: 12px
+
+            &-main
+                font-size: 14px
+
+    .jurists
+        &__request
+            padding: 20px
+
+            &__title
+                font-size: 20px
+
+            &__form
+                &-main
+                    height: 180px
+
+                .input-wrapper__button
+                    font-size: 16px
+
+                .form-subtext
+                    font-size: 12px
+
+                .form-info
+                    flex-direction: row
+
+            &__description
+                font-size: 12px
+
+        &__list
+            &__item
+                &-link
+                    align-items: center
+
+                &-image
+                    width: 50px
+                    height: 50px
+
+                &-name
+                    font-size: 14px
+
+                &-desc
+                    font-size: 12px
+
+                &more
+                    font-size: 12px
+
+        &__link
+            font-size: 14px
+            padding-top: 15px
+            padding-bottom: 16px
+
+    .form
+        &-row
+            flex-direction: column
+
+        &-info__item
+            &-main
+                font-size: 16px
+
+            &-sub
+                font-size: 12px
+
+    .guide
+        &__title
+            font-size: 20px
+
+        &__section
+            &-title
+                font-size: 18px
+
+            &-list__item-link
+                font-size: 12px
+
+    .menu
+        width: 75%
+
+    .swiper
+        margin-right: -15px !important
+
+        &-button
+            display: none !important
+
+@media screen and (max-width: 390px)
+    .tutorial__variants
+        grid-template-columns: repeat(1, 1fr)
+
+        &__item
+            max-height: none
+
+    .menu
+        width: 100%
